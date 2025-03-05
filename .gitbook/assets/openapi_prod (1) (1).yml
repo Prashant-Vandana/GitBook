@@ -1,0 +1,933 @@
+---
+openapi: 3.0.3
+info:
+  title: Nightfall API
+  description: This API exposes detectors for sensitive data in arbitrary string payloads.
+  version: 3.0.0
+servers:
+  - url: https://api.nightfall.ai
+security:
+  - BearerAuth: [ ]
+paths:
+  "/v3/scan":
+    post:
+      tags:
+        - scan
+      summary: Scan Plain Text
+      security:
+        - BearerAuth: [ ]
+      description: Provide a list of arbitrary string data, and scan each item with
+        the provided detectors to uncover sensitive information. Returns
+        a list equal in size to the number of provided string payloads. The item at
+        each list index will be a list of all matches for the provided detectors, or an
+        empty list if no occurrences are found.
+      operationId: ScanPayloadV3
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ScanRequestV3'
+        required: true
+      responses:
+        200:
+          description: Success
+          headers:
+            Content-Type:
+              description: the content type of the response
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScanResponseV3'
+        400:
+          description: Invalid request payload
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        401:
+          description: Authentication failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        422:
+          description: Unprocessable request payload
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        429:
+          description: Rate Limit Exceeded or Monthly Quota Exceeded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Internal Nightfall Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      x-codegen-request-body-name: ScanReqV3
+  "/v3/upload":
+    post:
+      tags:
+        - upload
+      summary: Initiate File Upload
+      security:
+        - BearerAuth: [ ]
+      description: Creates a new file upload session. If this operation returns successfully, the ID returned as
+        part of the response object shall be used to refer to the file in all subsequent upload and scanning operations.
+      operationId: InitiateUploadV3
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FileUploadCreateRequestV3'
+        required: true
+      responses:
+        200:
+          description: Success
+          headers:
+            Content-Type:
+              description: the content type of the response
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FileUploadV3'
+        400:
+          description: Invalid request payload
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        401:
+          description: Authentication failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        429:
+          description: Rate Limit Exceeded or Monthly Quota Exceeded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Internal Nightfall Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      x-codegen-request-body-name: FileUploadCreateRequestV3
+  "/v3/upload/{fileId}":
+    patch:
+      tags:
+        - upload
+      summary: Upload File Chunk
+      security:
+        - BearerAuth: [ ]
+      description: Upload all bytes contained in the request body to the file identified by the ID in the path
+        parameter.
+      operationId: UploadChunkV3
+      parameters:
+        - in: path
+          name: fileId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: a file ID returned from a previous file creation request
+        - in: header
+          name: X-Upload-Offset
+          schema:
+            type: integer
+          required: true
+          description: The numeric offset at which the bytes contained in the body should be written. This offset must
+            be a multiple of the chunk size returned when the file upload was created.
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              description: The payload bytes to upload; the size of the request body must exactly match the chunkSize
+                that was returned when the file upload was created.
+        required: true
+      responses:
+        204:
+          description: Success
+          headers:
+            Content-Type:
+              description: the content type of the response
+              schema:
+                type: string
+        400:
+          description: Invalid request payload
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        401:
+          description: Authentication failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        404:
+          description: Invalid File ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        429:
+          description: Rate Limit Exceeded or Monthly Quota Exceeded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Internal Nightfall Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      x-codegen-request-body-name: FileUploadCreateRequestV3
+  "/v3/upload/{fileId}/finish":
+    post:
+      tags:
+        - upload
+      summary: Complete File Upload
+      security:
+        - BearerAuth: [ ]
+      description: Validates that all bytes of the file have been uploaded, and that the content type is supported by
+        Nightfall.
+      operationId: CompleteUploadV3
+      parameters:
+        - in: path
+          name: fileId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: a file ID returned from a previous file creation request
+      responses:
+        200:
+          description: Success
+          headers:
+            Content-Type:
+              description: the content type of the response
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FileUploadV3'
+        400:
+          description: Invalid request payload
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        401:
+          description: Authentication failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        404:
+          description: Invalid File ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        409:
+          description: File Upload in Incorrect State
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        429:
+          description: Rate Limit Exceeded or Monthly Quota Exceeded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Internal Nightfall Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      x-codegen-request-body-name: FileUploadCreateRequestV3
+  "/v3/upload/{fileId}/scan":
+    post:
+      tags:
+        - scan
+        - upload
+        - file
+      summary: Scan Uploaded File
+      security:
+        - BearerAuth: [ ]
+      description: Triggers a scan of the file identified by the provided fileID. As the underlying file might be
+        arbitrarily large, this scan is conducted asynchronously. Results from the scan are delivered to the webhook URL
+        provided in the request payload.
+      operationId: ScanUploadV3
+      parameters:
+        - in: path
+          name: fileId
+          schema:
+            type: string
+            format: uuid
+          required: true
+          description: a file ID returned from a previous file creation request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AsyncScanRequestV3'
+        required: true
+      responses:
+        200:
+          description: Success
+          headers:
+            Content-Type:
+              description: the content type of the response
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FileScanResponse'
+        400:
+          description: Invalid request payload
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        401:
+          description: Authentication failure
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        404:
+          description: Invalid File ID
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        409:
+          description: Incorrect File State
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        422:
+          description: Unprocessable request payload
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        429:
+          description: Rate Limit Exceeded or Monthly Quota Exceeded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Internal Nightfall Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      x-codegen-request-body-name: FileUploadCreateRequestV3
+components:
+  schemas:
+    Empty:
+      type: object
+    ScanRequestV3:
+      type: object
+      properties:
+        policyUUIDs:
+          type: array
+          items:
+            type: string
+            description: A policy UUID.
+          description: A list of UUIDs referring to policies to use to scan the request payload. Policies can be built in the Nightfall Dashboard. Maximum 1.
+        policy:
+          type: object
+          properties:
+            detectionRuleUUIDs:
+              type: array
+              items:
+                type: string
+                description: A detection rule UUID.
+              description: A list of UUIDs referring to detection rules to use to scan the request payload. Detection
+                rules can be built in the Nightfall dashboard. Maximum 20.
+            detectionRules:
+              type: array
+              items:
+                "$ref": "#/components/schemas/DetectionRule"
+              description: A list of inline detection rule definitions to use to scan the request payload. Maximum 20.
+            contextBytes:
+              type: integer
+              description: The number of bytes to include as before / after context when a finding is returned. Maximum 40.
+            defaultRedactionConfig:
+              $ref: '#/components/schemas/RedactionConfig'
+            alertConfig:
+              $ref: '#/components/schemas/AlertConfig'
+          description: Policy can contain a list of pre-configured detection rule UUID's and/or a list of inline detection rules with which to scan the request payload. At least one list must be non-empty.
+        payload:
+          type: array
+          items:
+            type: string
+            description: A collection of strings to scan.
+          description: The text sample(s) you wish to scan. This data is passed
+            as a string list, so you may choose to segment your text into multiple
+            items for better granularity. The aggregate size of your text (summed across
+            all items in the list) must not exceed 500 KB for any individual request,
+            and the number of items in that list may not exceed 50,000.
+      description: The request body of the /v3/scan endpoint
+    FileUploadCreateRequestV3:
+      type: object
+      properties:
+        fileSizeBytes:
+          type: integer
+          description: the number of bytes representing the size of the file to-be-uploaded.
+    FileUploadV3:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: a UUID to uniquely identify a particular file upload
+        fileSizeBytes:
+          type: integer
+          description: the size of the file in bytes
+        chunkSize:
+          type: integer
+          description: the number of bytes to upload in each chunk upload request
+        mimeType:
+          type: string
+          description: an RFC2045 media type that describes the underlying content type
+    AsyncScanInitiatedResponseV3:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: a UUID to uniquely identify a particular file upload
+        message:
+          type: string
+          description: describes the status of the scan request.
+    PolicyV3:
+      type: object
+      properties:
+        webhookURL:
+          type: string
+          deprecated: true
+          description: the URL that Nightfall shall deliver webhooks to when the scan completes. The URL must use the HTTPS scheme. This field has been deprecated in favor of the more general 'alertConfig'.
+        detectionRuleUUIDs:
+          type: array
+          description: A list of pre-existing detection rule UUIDs to scan a file against. These UUIDs can be fetched from the Nightfall Dashboard.
+          items:
+            type: string
+            format: uuid
+        detectionRules:
+          type: array
+          description: A list of inlined detection rule definitions to scan a file against.
+          items:
+            "$ref": "#/components/schemas/DetectionRule"
+        alertConfig:
+          $ref: '#/components/schemas/AlertConfig'
+        defaultRedactionConfig:
+          $ref: '#/components/schemas/RedactionConfig'
+        enableFileRedaction:
+          type: boolean
+          description: Determines if a redacted version of the file will be returned, if available for the mime type. Current supported mime types are CSV and TSV. Defaults to false.
+    AsyncScanRequestV3:
+      type: object
+      properties:
+        policyUUID:
+          type: string
+          format: uuid
+          description: the UUID of the Detection Policy to be used with this scan. Exactly one of this field or "policy"
+            should be provided.
+        policy:
+          "$ref": "#/components/schemas/PolicyV3"
+        requestMetadata:
+          type: string
+          description: A string containing arbitrary metadata. Callers may opt to use this to help identify their
+            input file upon receiving a webhook response. Maximum length 10 KB.
+    FileScanResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: a UUID to uniquely identify a particular file upload
+        message:
+          type: string
+          description: message indicating that file scanning has been initiated
+    ScanResponseV3:
+      type: object
+      properties:
+        findings:
+          "$ref": "#/components/schemas/ScanResponseV3Array"
+        redactedPayload:
+          type: array
+          items:
+            type: string
+          description: A list containing the the redacted version of each string in the input payload. If no redactions were applied, the corresponding string will be empty.
+    ScanResponseV3Array:
+      type: array
+      description: A list of all findings that were detected in the request payload. Each item in the list is a list of all findings that occurred at the corresponding list index from the input payload.
+      items:
+        "$ref": "#/components/schemas/EachItemV3Array"
+    EachItemV3Array:
+      type: array
+      items:
+        "$ref": "#/components/schemas/FindingV3"
+    FindingV3:
+      type: object
+      properties:
+        finding:
+          type: string
+          description: The string that triggered a match during the scan.
+        redactedFinding:
+          type: string
+          description: The redacted version of finding. This key is omitted if no redactionConfig was configured the detector that triggered the match.
+        beforeContext:
+          type: string
+          description: The sequence of bytes that occurred directly prior to the matched finding. The number of bytes is usually equal to the requested number from the request config, but it could be smaller if the finding occurs near the beginning of the payload. This key is omitted if no context was requested.
+        afterContext:
+          type: string
+          description: The sequence of bytes that occurred directly after the matched finding. The number of bytes is usually equal to the requested number from the request config, but it could be smaller if the finding occurs near the end of the payload. This key is omitted if no context was requested.
+        detector:
+          type: object
+          properties:
+            name:
+              type: string
+              description: The display name of the detector that matched the finding.
+            uuid:
+              type: string
+              format: uuid
+              description: The UUID of the detector that matched the finding. This UUID can be looked up in the Nightfall dashboard.
+            subdetector:
+              type: object
+              description: Optional metadata describing the subdetector that matched the finding.
+              properties:
+                name:
+                  type: string
+                  description: The display name of the subdetector that matched the finding.
+                uuid:
+                  type: string
+                  format: uuid
+                  description: The UUID of the subdetector that matched the finding. This UUID can be looked up in the Nightfall dashboard.
+          description: Metadata describing the detector that matched the finding.
+        confidence:
+          $ref: '#/components/schemas/Confidence'
+        location:
+          type: object
+          properties:
+            byteRange:
+              $ref: '#/components/schemas/ByteRange'
+            codepointRange:
+              $ref: '#/components/schemas/CodepointRange'
+          description: "The location of the finding in the corresponding original input payload string."
+        redactedLocation:
+          type: object
+          properties:
+            byteRange:
+              $ref: '#/components/schemas/ByteRange'
+            codepointRange:
+              $ref: '#/components/schemas/CodepointRange'
+          description: "The location of the redacted finding in the corresponding redactedPayload string."
+    DetectionRule:
+      type: object
+      properties:
+        name:
+          type: string
+          description: An optional name for the detection rule.
+        logicalOp:
+          $ref: '#/components/schemas/LogicalOp'
+        detectors:
+          type: array
+          items:
+            $ref: '#/components/schemas/DetectorV3'
+          description: A list of detectors the request payload should be scanned against.
+      description: A rule that defines what detectors the request payload should be scanned against.
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          description: A status code to uniquely describe this error.
+        message:
+          type: string
+          description: A message associated with the status code.
+        description:
+          type: string
+          description: Additional details to explain what may have occurred. Omitted if empty.
+        additionalData:
+          type: object
+          description: Extra tags and metadata that provide debugging information surrounding the error. Omitted if empty.
+          additionalProperties: true
+    DetectorV3:
+      type: object
+      properties:
+        minNumFindings:
+          type: integer
+          description: The minimum number of findings required in order for this detector to be reported.
+        minConfidence:
+          $ref: '#/components/schemas/Confidence'
+        detectorUUID:
+          type: string
+          description: The UUID of a pre-existing detector to use. If this value is provided, all below fields are ignored.
+        displayName:
+          type: string
+          description: The display name for this detector's findings in the response.
+        detectorType:
+          $ref: '#/components/schemas/DetectorType'
+        nightfallDetector:
+          $ref: '#/components/schemas/NightfallDetectorType'
+        regex:
+          $ref: '#/components/schemas/Regex'
+        wordList:
+          $ref: '#/components/schemas/WordList'
+        contextRules:
+          type: array
+          items:
+            "$ref": '#/components/schemas/ContextRule'
+          description: A list of context rules.
+        exclusionRules:
+          type: array
+          items:
+            "$ref": '#/components/schemas/ExclusionRule'
+          description: A list of exclusion rules.
+        redactionConfig:
+          $ref: '#/components/schemas/RedactionConfig'
+        scope:
+          $ref: '#/components/schemas/Scope'
+    ContextRule:
+      type: object
+      properties:
+        regex:
+          $ref: '#/components/schemas/Regex'
+        proximity:
+          type: object
+          properties:
+            windowBefore:
+              type: integer
+              description: The number of leading characters to include as context before the finding itself.
+            windowAfter:
+              type: integer
+              description: The number of trailing characters to include as context after the finding itself.
+          description: The object containing the length of characters before and after finding to evaluate context.
+        confidenceAdjustment:
+          type: object
+          properties:
+            fixedConfidence:
+              $ref: '#/components/schemas/Confidence'
+          description: The object containing the confidence level to adjust findings to.
+      description: A context rule adjusts the finding confidence based on surrounding context.
+    ExclusionRule:
+      type: object
+      properties:
+        matchType:
+          $ref: '#/components/schemas/MatchType'
+        exclusionType:
+          $ref: '#/components/schemas/ExclusionType'
+        regex:
+          $ref: '#/components/schemas/Regex'
+        wordList:
+          $ref: '#/components/schemas/WordList'
+      description: An exclusion rule removes findings that match the rule's given exlusion.
+    RedactionConfig:
+      type: object
+      nullable: true
+      properties:
+        maskConfig:
+          $ref: '#/components/schemas/MaskConfig'
+        infoTypeSubstitutionConfig:
+          $ref: '#/components/schemas/InfoTypeSubstitutionConfig'
+        substitutionConfig:
+          $ref: '#/components/schemas/SubstitutionConfig'
+        cryptoConfig:
+          $ref: '#/components/schemas/CryptoConfig'
+        removeFinding:
+          type: boolean
+          description: "Determines if the response object will contain the un-redacted sensitive finding that was triggered by the scan. Defaults to false."
+      description: "A config that determines how a finding will be redacted. Must contain exactly one of [maskConfig, infoTypeSubstitutionConfig, substitutionConfig, cryptoConfig]."
+    Scope:
+      type: string
+      enum: &SCOPE
+        - Content
+        - File
+        - ContentAndFile
+      description: "The scope to run the detector over. Setting any detector to File will cause it to run against the file name."
+    MaskConfig:
+      type: object
+      nullable: true
+      properties:
+        maskingChar:
+          type: string
+          minLength: 1
+          maxLength: 1
+          description: "The UTF-8 character used to mask a finding. If not provided, we will mask with an asterisk \"*\". Other examples include \"#\", \"X\", \"🙅🏽\", \"🙈\", etc."
+        charsToIgnore:
+          type: array
+          minLength: 0
+          maxLength: 100
+          items:
+            type: string
+            description: "A character that will not be masked. e.g. \"-\""
+          description: "A list of characters that will not be masked. For example, you could set this field to [\"-\",\"@\"] to preserve formatting context that is typically present in credit cards or emails (e.g. ****-****-****-**** versus ***************, or ***************** versus *****@***********)."
+        numCharsToLeaveUnmasked:
+          type: integer
+          minimum: 0
+          maximum: 1000
+          description: "The number of characters that will be left unmasked. For instance, if you want to mask all but the last 4 digits of a credit card number, set this value to 4 so that the redacted finding would look like ***************4242. "
+        maskLeftToRight:
+          type: boolean
+          description: "Determines if masking is applied left to right (*****/1984) instead of right to left (01/01*****). By default, this value is false."
+      description: "A config that masks a sensitive finding. e.g. '4242-4242-4242-4242' can be configured to be redacted to '####-####-####-4242'."
+    InfoTypeSubstitutionConfig:
+      nullable: true
+      type: object
+      description: "A config that substitutes a sensitive finding with the name of the `NIGHTFALL_DETECTOR` that triggered it. This config is only valid for detector's with detectorType `NIGHTFALL_DETECTOR`. e.g. '4242-4242-4242-4242' can be configured to be redacted to '[CREDIT_CARD_NUMBER]'."
+    SubstitutionConfig:
+      type: object
+      nullable: true
+      properties:
+        substitutionPhrase:
+          type: string
+          maxLength: 1000
+          description: "The value that will replace a sensitive finding. e.g. '<oh no!🙈>'"
+      description: "A config that substitutes a sensitive finding with the configured substitutionPhrase. If no substitutionPhrase is configured, it will substitute the finding with an empty string. For example, 'my cc is 4242-4242-4242-4242' can be configured to be redacted to 'my cc is <oh no!🙈>'"
+    CryptoConfig:
+      type: object
+      nullable: true
+      properties:
+        publicKey:
+          type: string
+          description: |
+            The PEM formatted public key block that will be used to encrypt findings. Currently, only RSA encryption is supported.
+
+            Here's an example PEM formatted public key block:
+
+            -----BEGIN PUBLIC KEY-----
+            MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAydYMwOYUGyBXDgHkzv19
+            YR/dYQES4kYTMUps39qv/amNDywz4nsBDvCUqUvcN3nEpplHlYGH5ShSeA4G/Fcm
+            RqynSLVyFPZat/8E7n+EeHsgihFrr8oDWo5UBjCwRinTrC0m11q/5SeNzwVCWkf9
+            x40u94QBz13dQoa9yPwaZBX5uBzyH86R7yeZHpad2cLq0ltpmJ3j5UfsFilkOb3J
+            B60TNpNDdfabprot/y30CEnDDOgAXGtV1m0AhQpQjKRnkUs39DntqSbS+i0Ugbyq
+            zEGNUkeR1WsotXekW4KnbWA7k6S8SfkO27vnTSY5b9g/KKaOdysn5YaWJPfTVT/n
+            ywIDAQAB
+            -----END PUBLIC KEY-----
+      description: "A config that will encrypt a sensitive finding with the provided PEM formatted public key using RSA encryption."
+    AlertConfig:
+      type: object
+      nullable: true
+      description: "A configuration object that allows clients to specify where alerts should be delivered when findings are discovered as part of a scan. These alerts are delivered asynchronously to the provided platforms."
+      properties:
+        slack:
+          $ref: '#/components/schemas/SlackAlert'
+        email:
+          $ref: '#/components/schemas/EmailAlert'
+        url:
+          $ref: '#/components/schemas/WebhookAlert'
+        siem:
+          $ref: '#/components/schemas/SIEMAlert'
+    SlackAlert:
+      type: object
+      nullable: true
+      description: "Contains the configuration required to allow clients to send asynchronous alerts to a Slack workspace when findings are detected. In order to use this alert destination, you must first authenticate Nightfall to your Slack workspace under the Settings menu on the Nightfall Dashboard. Alerts are only sent if findings are detected."
+      properties:
+        target:
+          type: string
+          description: "The name of the Slack conversation to which alerts should be sent. Currently, Nightfall supports sending alerts to public channels, formatted like \"#general\"."
+    EmailAlert:
+      type: object
+      nullable: true
+      description: "Contains the configuration required to allow clients to send an asynchronous email message when findings are detected. Alerts are only sent if findings are detected."
+      properties:
+        address:
+          type: string
+          description: "The email address to which alerts should be sent."
+    WebhookAlert:
+      type: object
+      nullable: true
+      description: "Contains the configuration required to allow clients to send a webhook event to an external URL when findings are detected. When findings are detected, an alert is always sent to the webhook, *even when there are no findings*."
+      properties:
+        address:
+          type: string
+          description: "The URL to which alerts should be sent. This URL must (1) use the HTTPS scheme, (2) be able to accept requests made with the POST verb, and (3) respond with a 200 status code upon receipt of the event."
+    SIEMAlert:
+      type: object
+      nullable: true
+      description: "Contains the configuration required to allow clients to send a SIEM events to an external URL when findings are detected. When findings are detected, an alert is always sent to the webhook, *even when there are no findings*."
+      properties:
+        address:
+          type: string
+          description: "The URL to which alerts should be sent. This URL must (1) use the HTTPS scheme, (2) be able to accept requests made with the POST verb, and (3) respond with a 200 status code upon receipt of the event."
+        sensitiveHeaders:
+          type: object
+          additionalProperties: 
+            type: string
+          description: "Sensitive header key value pairs to include in the SIEM request. Used for adding sensitive content like authentication tokens."
+        plainTextHeaders:
+          type: object
+          additionalProperties: 
+            type: string
+          description: "Header key value pairs to include in the SIEM request."
+    Regex:
+      type: object
+      nullable: true
+      properties:
+        pattern:
+          type: string
+          description: The regex pattern to match on.
+        isCaseSensitive:
+          type: boolean
+          description: The case sensitivity for the regex pattern.
+      description: The regex object for the regex detector, context rules, and exclusion rules.
+    WordList:
+      type: object
+      nullable: true
+      properties:
+        values:
+          type: array
+          items:
+            type: string
+          description: A list of words for wordList.
+        isCaseSensitive:
+          type: boolean
+          description: The case sensitivity for words in the wordList. If false, ignore the case of findings.
+      description: The WordList object for wordList detector and exclusion rules.
+    NightfallDetectorType:
+      type: string
+      enum: &DETECTOR
+        - AMERICAN_BANKERS_CUSIP_ID
+        - API_KEY
+        - BRAZIL_CPF_NUMBER
+        - CANADA_BC_PHN
+        - CANADA_BANK_ACCOUNT
+        - CANADA_DRIVERS_LICENSE_NUMBER
+        - CANADA_GOVERNMENT_ID
+        - CANADA_OHIP
+        - CANADA_PASSPORT
+        - CANADA_PERMANENT_RESIDENT_NUMBER
+        - CANADA_QUEBEC_HIN
+        - CANADA_SOCIAL_INSURANCE_NUMBER
+        - CREDIT_CARD_NUMBER
+        - CRYPTOGRAPHIC_KEY
+        - DATABASE_CONNECTION_STRING
+        - DATE
+        - DATE_OF_BIRTH
+        - EMAIL_ADDRESS
+        - FDA_NATIONAL_DRUG_NAME
+        - FRANCE_CNI
+        - FRANCE_INSEE
+        - FRANCE_PASSPORT
+        - GERMANY_IDENTITY_NUMBER
+        - GERMANY_PASSPORT
+        - GCP_CREDENTIALS
+        - HIPAA_DEFINED_PII
+        - IBAN_CODE
+        - ICD10_CODE
+        - ICD10_DIAGNOSIS_DESCRIPTION
+        - ICD9_CODE
+        - ICD9_DIAGNOSIS_DESCRIPTION
+        - IMEI_HARDWARE_ID
+        - INDIA_PAN_INDIVIDUAL
+        - INDIA_AADHAAR_INDIVIDUAL
+        - IP_ADDRESS
+        - IRELAND_PASSPORT
+        - IRELAND_PPSN
+        - LOCATION
+        - MAC_ADDRESS
+        - PASSWORD_IN_CODE
+        - PERSON_NAME
+        - PHONE_NUMBER
+        - PROTECTED_HEALTH_INFORMATION
+        - RANDOMLY_GENERATED_TOKEN
+        - SCOTLAND_COMMUNITY_HEALTH_INDEX_NUMBER
+        - STREET_ADDRESS
+        - SWIFT_CODE
+        - UK_ELECTORAL_ROLL_NUMBER
+        - UK_DRIVERS_LICENSE_NUMBER
+        - UK_NATIONAL_HEALTH_SERVICE_NUMBER
+        - UK_NATIONAL_INSURANCE_NUMBER
+        - UK_PASSPORT
+        - UK_TAXPAYER_REFERENCE
+        - US_BANK_ROUTING_MICR
+        - US_DRIVERS_LICENSE_NUMBER
+        - US_EMPLOYER_IDENTIFICATION_NUMBER
+        - US_HEALTHCARE_NPI
+        - US_HEALTH_INSURANCE_CLAIM_NUMBER
+        - US_INDIVIDUAL_TAXPAYER_IDENTIFICATION_NUMBER
+        - US_MEDICARE_BENEFICIARY_IDENTIFIER
+        - US_PASSPORT
+        - US_SOCIAL_SECURITY_NUMBER
+        - US_VEHICLE_IDENTIFICATION_NUMBER
+      description: The name for a Nightfall detector.
+    ByteRange:
+      type: object
+      properties:
+        start:
+          type: integer
+          description: The index of the fragment's starting byte.
+        end:
+          type: integer
+          description: The index of the fragment's ending byte.
+    CodepointRange:
+      type: object
+      properties:
+        start:
+          type: integer
+          description: The index of the fragment's starting codepoint character.
+        end:
+          type: integer
+          description: The index of the fragment's ending codepoint character.
+    Confidence:
+      type: string
+      enum: &CONFIDENCE
+        - VERY_UNLIKELY
+        - UNLIKELY
+        - POSSIBLE
+        - LIKELY
+        - VERY_LIKELY
+      description: The confidence level of a finding.
+    LogicalOp:
+      type: string
+      enum: &LOGICALOP
+        - ANY
+        - ALL
+      description: Supported values ALL or ANY. Applies a logical "AND" or "OR" (respectively) to the list of detectors to decide when a finding should be surfaced.
+    DetectorType:
+      type: string
+      enum:
+        - NIGHTFALL_DETECTOR
+        - REGEX
+        - WORD_LIST
+      description: The type of detector.
+    MatchType:
+      type: string
+      enum:
+        - PARTIAL
+        - FULL
+      description: The type of match for a pattern.
+    ExclusionType:
+      type: string
+      enum:
+        - REGEX
+        - WORD_LIST
+      description: The type of exclusion rule.
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
