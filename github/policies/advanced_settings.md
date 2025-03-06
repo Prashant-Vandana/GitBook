@@ -46,7 +46,7 @@ End-user remediation (also known as Human Firewall) allows you to configure reme
 * **When a Violation is Reported as False Positive**: You can use this option to set actions to be taken when a violation is reported as false positive by the end-user. You can either set the remediation to be automatic or manual.&#x20;
 * **Remind Every (until Violation expires)**: You can use this option to set a reminder for the end-user to take action on the violation. You can choose to remind the end user every 24, 48, or 72 hours.
 
-To understand where end users can see these options, see [GitHub Notifications](https://help.nightfall.ai/nightfall-ai/nightfall-for-github/configuring-policies/creating-the-policy/managing-github-violations#viewing-notifications-in-github)
+To understand where end users can see these options, see [GitHub Notifications](https://help.nightfall.ai/github/events#viewing-notifications-in-github).
 
 <figure><img src="../../.gitbook/assets/image (1283).png" alt="" width="563"><figcaption></figcaption></figure>
 
