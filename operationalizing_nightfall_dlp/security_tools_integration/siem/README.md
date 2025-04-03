@@ -128,15 +128,11 @@ Next, configure the outgoing webhook in Nightfall. This webhook will fire in rea
 
 Navigate to the integration for which you would be interested in setting up a webhook for alerts. Webhooks are available all native integrations.
 
-Select the **Settings** tab on the top.
-
-Select **Change** or **Add** next to the Webhook option.&#x20;
-
-![](<../../../.gitbook/assets/Screen Shot 2022-01-26 at 5.46.22 PM.png>)
-
-Enter the URL to your webhook endpoint.&#x20;
-
-You may send a sample payload to the endpoint that you have entered to verify a successful connection using the **Test** button.
+1. Select the **Settings** tab on the top.
+2. Click the **Console Audit** tab.&#x20;
+3. Click **+ Webhook.**
+4. Enter the URL to your webhook endpoint.&#x20;
+5. You may send a sample payload to the endpoint that you have entered to verify a successful connection using the **Test** button.
 
 ![](<../../../.gitbook/assets/Configure Alter URL with Test Button HTTPS.png>)
 
@@ -144,7 +140,7 @@ You may send a sample payload to the endpoint that you have entered to verify a 
 
 You may also add HTTP Headers to send authentication tokens or other content using the **Add Headers** button.
 
-<figure><img src="../../../.gitbook/assets/ConfiigureCustomHTTPHeaderValues.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
 
 Once your header key and value is entered you may obfuscate it by clicking on the "lock" icon next to the value field for the header. Click the **Save** button to persist your changes to the headers.
 
