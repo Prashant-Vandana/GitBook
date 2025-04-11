@@ -20,10 +20,11 @@ The following tables explains the various scenarios and how Deduplication and Au
 
 ### Auto Resolve
 
-| User Action in Google Drive                                                                                |                                                                                           |                                          |
-| ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------- |
-| The user deletes sensitive data from a file.                                                               | The user removes credit card number 4242-4242-4242-4242 from the document called Data.    | The event is automatically resolved.     |
-| The user deletes the document containing sensitive data without removing the sensitive data present in it. | The user deletes the document called Data without erasing the credit card number from it. | The Event is not resolved automatically. |
+| User Action in Google Drive                                                                                                  |                                                                                               |                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| The user deletes sensitive data from a file.                                                                                 | The user removes credit card number 4242-4242-4242-4242 from the document called **Data**.    | The event is automatically resolved.                                                                                         |
+| The user moves a document containing sensitive data to Google Drive trash without removing the sensitive data present in it. | The user trashes the document called **Data** without erasing the credit card number from it. | The Event is not resolved automatically.                                                                                     |
+| User deletes a file permanently (file not not present in trash), with or without removing the sensitive data present in it.  | The user permanently deletes the document called **Data.**                                    | <p>The Event is resolved automatically. <br><br>The Event log displays the message "The Violation resource was deleted".</p> |
 
 ## Confluence
 
