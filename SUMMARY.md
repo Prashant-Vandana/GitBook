@@ -295,20 +295,20 @@
   * [Risk Score for Notion](notion/policies/risk_score.md)
   * [Manage Notion Events](notion/policies/events.md)
 
-## NIGHTFALL FOR CHATGPT <a href="#chatgpt" id="chatgpt"></a>
+## NIGHTFALL FOR Generative AI Applications <a href="#gen-ai" id="gen-ai"></a>
 
-* [Overview](chatgpt/overview.md)
-* [Install Nightfall for ChatGPT](chatgpt/installation/README.md)
-  * [Install Nightfall DLP on Individual Devices](chatgpt/installation/individual_devices.md)
-  * [Install Nightfall DLP Across Organization](chatgpt/installation/mdm.md)
-* [Configure Alerts for ChatGPT](chatgpt/integration_alerts.md)
-* [Creating ChatGPT Policies from Nightfall Console](chatgpt/policies/README.md)
-  * [ChatGPT App Selection](chatgpt/policies/integration.md)
-  * [Configure Detection Rules for ChatGPT](chatgpt/policies/detection_rules.md)
-  * [Configure Advanced Settings for ChatGPT](chatgpt/policies/advanced_settings.md)
-  * [Risk Score for ChatGPT](chatgpt/policies/risk_score.md)
-* [Nightfall Chrome Plugin Deployment Guide](chatgpt/deployment_guide.md)
-* [ChatGPT Safe Usage and Data Protection Policy](chatgpt/safety_guide.md)
+* [Overview](gen-ai/overview.md)
+* [Install Nightfall for GenAI apps](gen-ai/installation/README.md)
+  * [Install Nightfall DLP on Individual Devices](gen-ai/installation/individual_devices.md)
+  * [Install Nightfall DLP Across Organization](gen-ai/installation/mdm.md)
+* [Configure Alerts for ChatGPT](gen-ai/integration_alerts.md)
+* [Creating ChatGPT Policies from Nightfall Console](gen-ai/policies/README.md)
+  * [ChatGPT App Selection](gen-ai/policies/integration.md)
+  * [Configure Detection Rules for ChatGPT](gen-ai/policies/detection_rules.md)
+  * [Configure Advanced Settings for ChatGPT](gen-ai/policies/advanced_settings.md)
+  * [Risk Score for ChatGPT](gen-ai/policies/risk_score.md)
+* [Nightfall Browser Plugin Deployment Guide](gen-ai/deployment_guide.md)
+* [GenAI Safe Usage and Data Protection Policy](gen-ai/safety_guide.md)
 
 ## Developer Section
 

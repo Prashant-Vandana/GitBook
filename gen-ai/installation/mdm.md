@@ -1,12 +1,12 @@
 ---
 description: >-
-  Learn how to install the ChatGPT browser plugin across all devices of an
+  Learn how to install the Nightfall DLP browser plugin across all devices of an
   organization.
 ---
 
 # Install Nightfall DLP Across Organization
 
-The steps in this document can only be performed by a Nightfall admin installation process can only be performed by a Google Workspace admin and the plugin is installed on all the user devices that are part of the Google Workspace. Google Workspace admins can install the plugin in two ways which are described as follows.
+The steps in this document can only be performed by an Google Workspace admin user. The plugin is installed on all the user devices that are part of the Google Workspace. Google Workspace admins can install the plugin in two ways which are described as follows.
 
 ## Rollout Using MDM
 
@@ -18,6 +18,8 @@ Google Workspace administrators can use an MDM solution to rollout the extension
 * [Edge on Windows](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-manage-extensions-policies#force-install-an-extension)
 
 ## Rollout Using Chrome Management Google workspace
+
+Google admin users can  use Google chrome, Firefox or any chromium browser to rollout the installation. The procedure remains the same. In this section, a Google Chrome browser is used.&#x20;
 
 To rollout Chrome plugin using Chrome management:
 
