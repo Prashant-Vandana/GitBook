@@ -1,10 +1,10 @@
 ---
-description: Learn how you can configure the integration level alerts in the ChatGPT.
+description: Learn how you can configure the integration level alerts for GenAI apps.
 ---
 
-# Configure Alerts for ChatGPT
+# Configure Alerts for GenAI apps
 
-The Nightfall for ChatGPT integration supports the configuration of alerts at the policy level and also the integration level. Alerts can be sent in ChatGPT to the following alert destinations.
+The Nightfall for GenAI apps supports the configuration of alerts at the policy level and also the integration level. Alerts can be sent in GenAI apps to the following alert destinations.&#x20;
 
 * [Slack ](https://help.nightfall.ai/sensitive-data-protection/chatgpt/configuring-integration-alerts#configuring-slack-as-an-alert-channel)
 * [Email](https://help.nightfall.ai/sensitive-data-protection/chatgpt/configuring-integration-alerts#configuring-email-as-an-alert-channel)
@@ -13,7 +13,7 @@ The Nightfall for ChatGPT integration supports the configuration of alerts at th
 
 <figure><img src="../.gitbook/assets/image (839).png" alt=""><figcaption></figcaption></figure>
 
-When you configure alert settings at the integration level, the alert settings apply to all the policies, created for the ChatGPT DLP integration. However, when you configure alert settings specifically for a policy, which is created in the ChatGPT DLP integration, the alert settings are applicable only for that specific policy.&#x20;
+When you configure alert settings at the integration level, the alert settings apply to all the policies, created for the GenAI apps integration. However, when you configure alert settings specifically for a policy, which is created in the GenAI apps integration, the alert settings are applicable only for that specific policy.&#x20;
 
 This document explains how to configure alerts at the integration level. To learn about how to configure alerts at the policy level, read [this document](../gmail/policies/advanced_settings.md#admin-alerting).
 
@@ -25,11 +25,11 @@ This document explains how to configure alerts at the integration level. To lear
 
 ## Configure Alerts at the Integration Level&#x20;
 
-You can configure alerts at the integration level once you have installed the Nightfall for ChatGPT DLP  integration.&#x20;
+You can configure alerts at the integration level once you have installed the Nightfall for AI Apps DLP  integration.&#x20;
 
 To configure alerts at the integration level:
 
-1. Navigate to the ChatGPT DLP integration
+1. Navigate to the **AI apps** integration
 2. Scroll down to the **Alerting** section.
 3. You can configure one or multiple alert channels.&#x20;
 
@@ -44,28 +44,28 @@ To configure alerts at the integration level:
 
 <figure><img src="../.gitbook/assets/image (842).png" alt=""><figcaption></figcaption></figure>
 
-A confirmation pop-up box is displayed to confirm if the Slack channel (entered in the second step) must be used only for ChatGPT DLP integration or all the Nightfall integrations.&#x20;
+A confirmation pop-up box is displayed to confirm if the Slack channel (entered in the second step) must be used only for AI apps integration or all the Nightfall integrations.&#x20;
 
-4. Select **No, only integration level** to use the Slack channel only for ChatGPT DLP, or select **Yes, please** to use the selected Slack channel for all the Nightfall integrations.&#x20;
+4. Select **No, only integration level** to use the Slack channel only for AI apps, or select **Yes, please** to use the selected Slack channel for all the Nightfall integrations.&#x20;
 
-<figure><img src="../.gitbook/assets/image (843).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (843).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Configuring Email as an Alert Channel
 
 1. Click **+ Email**.
 
-<figure><img src="../.gitbook/assets/image (844).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (844).png" alt="" width="563"><figcaption></figcaption></figure>
 
 2. Enter the Email ID of the recipient who should receive the notification&#x73;**.**&#x20;
 3. Click **Save.**&#x20;
 
 <figure><img src="../.gitbook/assets/imageedit_8_4300516314.png" alt=""><figcaption></figcaption></figure>
 
-A confirmation pop-up box is displayed to confirm if the Email ID (entered in the second step) must be used only for ChatGPT DLP integration or all the Nightfall integrations.&#x20;
+A confirmation pop-up box is displayed to confirm if the Email ID (entered in the second step) must be used only for GenAI apps integration or all the Nightfall integrations.&#x20;
 
-4. Select **No, only integration level** to use the Slack channel only for ChatGPT DLP, or select **Yes, please** to use the selected Slack channel for all the Nightfall integrations.&#x20;
+4. Select **No, only integration level** to use the Slack channel only for GenAI apps, or select **Yes, please** to use the selected Slack channel for all the Nightfall integrations.&#x20;
 
-<figure><img src="../.gitbook/assets/image (163).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (163).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Configuring Webhook as an Alert Channel
 
@@ -107,9 +107,9 @@ This is part of alert event consumption and can be ignored.&#x20;
 
 <figure><img src="../.gitbook/assets/image (847).png" alt=""><figcaption></figcaption></figure>
 
-A confirmation pop-up box is displayed to confirm if the JIRA settings configured for the ChatGPT DLP integration must be applied to all the other Nightfall integrations too.&#x20;
+A confirmation pop-up box is displayed to confirm if the JIRA settings configured for the GenAI apps integration must be applied to all the other Nightfall integrations too.&#x20;
 
-6. Select **No, only integration level** to use the configurations only for ChatGPT DLP, or select **Yes, please** to use the selected JIRA configurations for all the Nightfall integrations.&#x20;
+6. Select **No, only integration level** to use the configurations only for GenAI apps, or select **Yes, please** to use the selected JIRA configurations for all the Nightfall integrations.&#x20;
 
 <figure><img src="../.gitbook/assets/image (848).png" alt=""><figcaption></figcaption></figure>
 

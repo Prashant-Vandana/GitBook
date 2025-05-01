@@ -1,10 +1,10 @@
 ---
 description: >-
   Learn how to configure the advanced settings section in Nightfall policies
-  created for ChatGPT.
+  created for AI Apps.
 ---
 
-# Configure Advanced Settings for ChatGPT
+# Configure Advanced Settings for AI Apps
 
 This stage allows you to select notification channels if a policy violation occurs. The notification alerts are sent at two levels.
 
@@ -17,7 +17,5 @@ The alert configurations configured in this section describe the process of crea
 {% endhint %}
 
 The steps to configure alert channels for policy-level integration are the same as in the case of integration-level alerts. You can refer to [this document](https://help.nightfall.ai/nightfall-ai/nightfall-for-chatgpt/configuring-integration-alerts#configure-alerts-at-the-integration-level) for steps.
-
-<figure><img src="../../.gitbook/assets/image (185).png" alt=""><figcaption></figcaption></figure>
 
 #### &#x20; <a href="#automated-actions" id="automated-actions"></a>

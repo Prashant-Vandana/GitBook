@@ -24,7 +24,6 @@ Nightfall DLP supports the following GenAI apps.&#x20;
 * [Microsoft Copilot ](https://copilot.microsoft.com/)
 * [Google Gemini](https://gemini.google.com/)
 * [DeepSeek AI](https://www.deepseek.com/)
-* [Claude](https://claude.ai/new)
 * [Grok](https://grok.com/)
 * [Perplexity AI](https://www.perplexity.ai/)
 
