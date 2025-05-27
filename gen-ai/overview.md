@@ -22,16 +22,17 @@ Nightfall DLP supports the following GenAI apps.&#x20;
 
 * [ChatGPT](https://chatgpt.com/)
 * [Microsoft Copilot ](https://copilot.microsoft.com/)
+* [Claude AI](https://claude.ai/)
 * [Google Gemini](https://gemini.google.com/)
 * [DeepSeek AI](https://www.deepseek.com/)
 * [Grok](https://grok.com/)
 * [Perplexity AI](https://www.perplexity.ai/)
 
-{% hint style="info" %}
-Important:
+{% hint style="warning" %}
+**Important**:
 
-* In case of ChatGPT, Nightfall provides a built in integration. You can use this integration to create policies for ChatGPT to monitor specific type of sensitive data based on detection rules, view policy violations in Nightfall and assess the risk score for each of the violation.&#x20;
-* Any policy created for the ChatGPT integration IS APPLICABLE to other GenAI apps as well. For instance, if you create a policy in ChatGPT to monitor if API keys are being used in ChatGPT and if an user uses an API key in Claude, Perplexity, or any other GenAI app, Nightfall can still detect and alert the user.&#x20;
+* In Copilot, Nightfall does not automatically redact the sensitive data present in your prompts. Nightfall identifies the sensitive data in your prompt. You must either manually redact the sensitive data before submitting the prompt to Copilot or provide a justification as to why the data is not sensitive in nature.
+* In Claude AI, Nightfall only monitors the AI application; if you submit a prompt with sensitive data, it is neither redacted nor identified. However, a Nightfall Event is generated in the Nightfall Events page and the notifications (if configured) are sent to the stakeholders.   &#x20;
 {% endhint %}
 
 You can monitor violations from the Nightfall console, receive automated alerts to Slack, email, or SIEM of choice, and receive context-rich alerts and remediate violations in real time.
