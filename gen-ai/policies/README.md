@@ -4,11 +4,7 @@ description: Learn how to create a policy for ChatGPT apps from within Nightfall
 
 # Creating GenAI Policies from Nightfall Console
 
-Once you install the GenAI app, you can start using them. In case ChatGPT, you can configure policies to record violations and set data that is deemed to be sensitive in nature to your organization.
-
-{% hint style="info" %}
-A policy created for ChatGPT is also applicable to all the other GenAI apps.&#x20;
-{% endhint %}
+Once you install the GenAI app, you must create policies in Nightfall to monitor the prompts being sent to Gen AI apps.&#x20;
 
 The policy creation involves the following stages.
 
