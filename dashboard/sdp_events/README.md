@@ -2,9 +2,9 @@
 description: Learn about the Events page in Nightfall
 ---
 
-# Sensitive Data Protection Events
+# Data Detection and Response Events
 
-An Event is an incident that is triggered when a data leak is detected by Nightfall. The Data Sensitive Events page displays all the details about the data sensitive events recorded in Nightfall from all the integrations.
+An Event is an incident that is triggered when a data leak is detected by Nightfall. The Data data detection and response (aka sensitive data protection) Events page displays all the details about the data sensitive events recorded in Nightfall from all the integrations.
 
 Before we proceed further, let's understand what exactly is a Finding and a Event.
 
@@ -12,7 +12,7 @@ Before we proceed further, let's understand what exactly is a Finding and a Even
 
 **Event:** An Event is an incident of data leaks, and a collection of findings that were detected while scanning an entire document or data in your database.
 
-## Events vs Finding
+## Events vs Findings
 
 When Nightfall scans data, a single Event can have multiple findings. For instance, consider that you upload a document to Google Drive. This document has 10 instances of secret information (10 API keys or 10 credit card numbers). These 10 instances are known as Findings. Since Nightfall scans the entire Google document at once, these 10 Findings are recorded as a single Event.&#x20;
 

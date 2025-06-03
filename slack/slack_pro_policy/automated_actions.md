@@ -12,7 +12,7 @@ Currently, Nightfall supports the **Delete Message** and **Delete File** automat
 
 To enable any of the automated actions, you must first turn on the toggle switch. Once the toggle switch is enabled, you can configure the timing for the action. If you select **immediately**, the action is executed as soon as sensitive data is detected.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 If you select **After**, you must also set the time frame when the action must be applied, after detecting the sensitive data.
 

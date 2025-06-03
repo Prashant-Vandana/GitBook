@@ -22,11 +22,11 @@ Automated actions allow you to configure automated remediation actions when sens
 
 * **Block**: The Block action blocks the Email and prevents it from being sent to the recipient. The sender receives a notification email that states that their Email was not sent to the recipient.&#x20;
 * **Quarantine Email**: The quarantine action guarantees the email which has sensitive data. A Nightfall admin can review the quarantined Email to check if data is sensitive and then take a call as to whether the Email must be sent to the recipient or blocked permanently.&#x20;
-* **Encrypt Email**: The encrypt action securely encrypts the contents of the email. When the encryption action is applied a new Event is created in the Nightfall Encryption Events page.&#x20;
+* **Encrypt Email**: The encrypt action securely encrypts the contents of the email. When the encryption action is applied a new Event is created in the [Nightfall Encryption Events](https://help.nightfall.ai/data-encryption/gmail/encryption-events-page) page.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (1144).png" alt=""><figcaption></figcaption></figure>
 
-If you enable the encryption action, additionally you can also configure the expiration time for the email. The recipient cannot view the email after the expiration of the time.&#x20;
+If you enable the encryption action, additionally you can also configure the expiration time for the email. The recipient cannot view the email after the expiration time is elapsed.
 
 <figure><img src="../../.gitbook/assets/image (1145).png" alt=""><figcaption></figcaption></figure>
 

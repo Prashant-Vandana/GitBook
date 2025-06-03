@@ -1,12 +1,12 @@
 ---
-description: Learn how to remediate events in Nightfall for Gmail.
+description: >-
+  Learn how to handle Nightfall Events that were created as a result of
+  sensitive data leak in the Exchange Online.
 ---
 
-# Remediation on Nightfall for Gmail
+# Manage Exchange Online Events
 
-This document explains the impact on end-users and Google Workspace admins when the automated actions in Gmail DLP (Block, Quarantine, or Encrypt) are implemented.&#x20;
-
-To learn more about configuring automated actions for Gmail DLP, see, [Automated actions](policies/advanced_settings.md#automated-actions).
+This document explains the impact on end-users and Microsoft Exchange/365 admins when the automated actions in Exchange Online DLP (Block, Quarantine, or Encrypt) are implemented.&#x20;
 
 ## Block
 
@@ -14,7 +14,7 @@ When an Email is blocked, the end user receives an Email from Nightfall that inf
 
 The Email looks as follows.&#x20;
 
-<figure><img src="../.gitbook/assets/imageedit_15_8551919775.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/imageedit_15_8551919775.jpg" alt=""><figcaption></figcaption></figure>
 
 The status of the Event is also automatically changed to Blocked when the Email is blocked.
 
@@ -28,24 +28,24 @@ To access the quarantine emails:
 2. Click the menu icon.
 3. Select **Admin**.
 
-<figure><img src="../.gitbook/assets/image (897).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (897).png" alt=""><figcaption></figcaption></figure>
 
 4. In the left menu, expand **Apps** and then expand **Google Workspace**.
 5. Click **Gmail**.
 
-<figure><img src="../.gitbook/assets/aaaa.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/aaaa.png" alt=""><figcaption></figcaption></figure>
 
 6. Scroll down and click **Manage quarantines**.
 
-<figure><img src="../.gitbook/assets/image (898).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (898).png" alt=""><figcaption></figcaption></figure>
 
 7. Click **GO TO ADMIN QUARANTINE**.
 
-<figure><img src="../.gitbook/assets/image (900).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (900).png" alt=""><figcaption></figcaption></figure>
 
 The list of all the quarantined emails is displayed.&#x20;
 
-<figure><img src="../.gitbook/assets/imageedit_17_4542853570.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/imageedit_17_4542853570.jpg" alt=""><figcaption></figcaption></figure>
 
 Click any email to expand it. You can view three options.&#x20;
 
@@ -53,7 +53,7 @@ Click any email to expand it. You can view three options.&#x20;
 * **ALLOW** - This option releases the email from quarantine and sends it to the recipient. You must select this option if you are confident that the sensitive data detected by Nightfall is false positive.
 * **DENY** - This option blocks the email and does not send it to the recipient. You must select this option if you are confident that the sensitive data detected by Nightfall is actually sensitive.
 
-<figure><img src="../.gitbook/assets/image (902).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (902).png" alt=""><figcaption></figcaption></figure>
 
 ## Encrypt
 
@@ -61,7 +61,7 @@ When an Email is encrypted, an additional event is created in the [Nightfall dat
 
 ## Understanding Gmail DLP Events
 
-When an end user violates a policy in Gmail DLP, an Event is generated based on the notification settings configured by you in the policy configurations. To learn more about Events, see [sdp\_events](../dashboard/sdp_events/ "mention").
+When an end user violates a policy in Gmail DLP, an Event is generated based on the notification settings configured by you in the policy configurations. To learn more about Events, see [sdp\_events](../../../dashboard/sdp_events/ "mention").
 
 To view the Events from the Nightfall Console:
 
@@ -69,23 +69,23 @@ To view the Events from the Nightfall Console:
 2. (Optional) Modify the days filter to view Events prior to last 7 days. By default the Events recorded in the **Last 7 Days** are displayed.
 3. Apply filters to view only the Gmail DLP Events.
 
-<figure><img src="../.gitbook/assets/image (1294).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1294).png" alt="" width="563"><figcaption></figcaption></figure>
 
-Once you filter the Events to view only the Confluence Events, you can refer to the [#event-list-view](../dashboard/sdp_events/#event-list-view "mention") section to learn more about the available options.&#x20;
+Once you filter the Events to view only the Confluence Events, you can refer to the [#event-list-view](../../../dashboard/sdp_events/#event-list-view "mention") section to learn more about the available options.&#x20;
 
 4. Click on any of the Events to view details of an Event. You may click anywhere in the row of an Event that you wish to inspect. Details will be present via a side panel.
 
 ## Event Actions
 
-Nightfall allows you to take various action on Events. When you take an action on an Event, the status of the Event changes accordingly. To learn more about Event status, refer to the [status.md](../dashboard/sdp_events/status.md "mention") document.
+Nightfall allows you to take various action on Events. When you take an action on an Event, the status of the Event changes accordingly. To learn more about Event status, refer to the [status.md](../../../dashboard/sdp_events/status.md "mention") document.
 
 In Gmail, you can take actions either from the Event list view page or the Event detail view page. On the Event list view page, you can click the ellipsis menu to view the available list of actions.&#x20;
 
-<figure><img src="../.gitbook/assets/image (1295).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1295).png" alt=""><figcaption></figcaption></figure>
 
 On the Event detail view, you can view the applicable actions from the actions section at the bottom.
 
-To view the complete list of actions, applicable to all the integrations, you can refer to the [event\_actions.md](../dashboard/sdp_events/event_actions.md "mention") document.&#x20;
+To view the complete list of actions, applicable to all the integrations, you can refer to the [event\_actions.md](../../../dashboard/sdp_events/event_actions.md "mention") document.&#x20;
 
 The list of actions supported for Confluence are as follows. Some of these actions are common to other integrations as well.&#x20;
 
@@ -96,4 +96,6 @@ The list of actions supported for Confluence are as follows. Some of these actio
 * **Notify Slack**: This action notifies the end user who added the sensitive data file to the OneDrive about the event,  through Slack.
 * **Send to JIRA**: This action creates a JIRA ticket for the Event. You can pick a project and Issue type while creating the JIRA ticket and can assign the JIRA ticket to the end-user.
 * **Resolve**: This action must be taken when the sensitive data is removed completely. This action resolves the Event.
+
+
 

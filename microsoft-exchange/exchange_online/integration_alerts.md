@@ -1,20 +1,20 @@
 ---
-description: Learn how to configure integration level alerts in Nightfall for OneDrive.
+description: Learn how you can configure integration level alerts in Exchange Online.
 ---
 
-# Configure Alerts for OneDrive
+# Configure Alerts for Exchange Online
 
-The Nightfall for OneDrive integration supports the configuration of alerts at the policy level and the integration level. Alerts can be sent in OneDrive to the following alert destinations.
+The Nightfall for Exchange Online integration supports the configuration of alerts at the policy level and at the integration level. Alerts can be sent in Exchange Online by using the following alert destinations.
 
-* [Slack ](https://help.nightfall.ai/sensitive-data-protection/microsoft-365/nightfall-for-onedrive/configuring-integration-alerts#configuring-slack-as-an-alert-channel)
-* [Microsoft Teams](https://help.nightfall.ai/sensitive-data-protection/microsoft-365/nightfall-for-onedrive/configuring-integration-alerts#configuring-ms-teams-as-an-alert-channel)
-* [Email](https://help.nightfall.ai/sensitive-data-protection/microsoft-365/nightfall-for-onedrive/configuring-integration-alerts#configuring-email-as-an-alert-channel)
-* [Webhook](https://help.nightfall.ai/sensitive-data-protection/microsoft-365/nightfall-for-onedrive/configuring-integration-alerts#configuring-webhook-as-an-alert-channel)
-* [Jira Tickets](https://help.nightfall.ai/sensitive-data-protection/microsoft-365/nightfall-for-onedrive/configuring-integration-alerts#configuring-jira-as-an-alert-channel)
+* [Slack](https://help.nightfall.ai/sensitive-data-protection/microsoft-365/nightfall-for-microsoft-teams/configuring-integration-alerts#configuring-slack-as-an-alert-channel)&#x20;
+* [Microsoft Teams](https://help.nightfall.ai/sensitive-data-protection/microsoft-365/nightfall-for-microsoft-teams/configuring-integration-alerts#configuring-ms-teams-as-an-alert-channel)
+* [Email](https://help.nightfall.ai/sensitive-data-protection/microsoft-365/nightfall-for-microsoft-teams/configuring-integration-alerts#configuring-email-as-an-alert-channel)
+* [Webhook](https://help.nightfall.ai/sensitive-data-protection/microsoft-365/nightfall-for-microsoft-teams/configuring-integration-alerts#configuring-webhook-as-an-alert-channel)
+* [Jira Tickets](https://help.nightfall.ai/sensitive-data-protection/microsoft-365/nightfall-for-microsoft-teams/configuring-integration-alerts#configuring-jira-as-an-alert-channel)
 
 <figure><img src="../../.gitbook/assets/image (923).png" alt=""><figcaption></figcaption></figure>
 
-When you configure alert settings at the integration level, the alert settings apply to all the policies, created for the OneDrive integration. However, when you configure alert settings specifically for a policy, which is created in the OneDrive integration, the alert settings are applicable only for that specific policy.&#x20;
+When you configure alert settings at the integration level, the alert settings apply to all the policies, created for the Exchange Online  integration. However, when you configure alert settings specifically for a policy, which is created in the Exchange Online  integration, the alert settings are applicable only for that specific policy.&#x20;
 
 This document explains how to configure alerts at the integration level. To learn about how to configure alerts at the policy level, read [this document](../../gmail/policies/advanced_settings.md#admin-alerting).
 
@@ -23,7 +23,7 @@ This document explains how to configure alerts at the integration level. To lear
 * To use Slack as an alert platform, you must first perform the required Slack configurations. You can refer to [this document](https://help.nightfall.ai/nightfall-ai/detection/setting-up-slack-as-an-alert-channel-in-nightfall) to learn more about how to configure Slack as an Alert platform.&#x20;
 * To use Webhook as an alert platform, you must first perform the required Webhook configurations. You can refer to [this document](https://help.nightfall.ai/nightfall-ai/operationalizing-dlp/integrating-with-security-tools/integrating-with-siem#configuring-outgoing-webhooks)[ ](https://help.nightfall.ai/nightfall-ai/operationalizing-dlp/integrating-with-security-tools/integrating-with-siem#configuring-outgoing-webhooks)to learn more about how to configure Webhook as an Alert platform. &#x20;
 * To use JIRA as an alert platform, you must have the DLP for the JIRA app installed from the [Atlassian Marketplace](https://marketplace.atlassian.com/apps/1226823/dlp-for-jira-nightfall-ai?tab=overview\&hosting=cloud). You can read more about the DLP for JIRA integration [here](https://help.nightfall.ai/nightfall-ai/nightfall-for-jira/getting-started/installing-nightfall-for-jira).&#x20;
-* To use MS Teams as an alert platform, you must install the MS Teams alert app in your MS Teams application. You can read more about this setup in the [Nightfall MS Teams](https://help.nightfall.ai/nightfall_alert_platform/alerting_to_ms_teams) document.
+* To use MS Teams as an alert platform, you must install the MS Teams alert app in your Exchange Online application. You can read more about this setup in the Nightfall [MS Teams](https://help.nightfall.ai/nightfall_alert_platform/alerting_to_ms_teams) document.
 
 ## Configure Alerts at the Integration Level&#x20;
 
@@ -31,10 +31,12 @@ You can configure alerts at the integration level once you have installed the Ni
 
 To configure alerts at the integration level:
 
-1. Navigate to the Integrations section from the left menu.
-2. Click Manage for the **OneDrive** widget.&#x20;
-3. Scroll down to the **OneDrive Alerting** section.
+1. Navigate to Integrations in the left menu.
+2. Click **Manage** on the **Exchange Online** widget.
+3. Scroll down to the **Exchange Online Alerting** section.
 4. You can configure one or multiple alert channels.&#x20;
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ### Configuring Slack as an Alert Channel
 
@@ -47,9 +49,9 @@ To configure alerts at the integration level:
 
 <figure><img src="../../.gitbook/assets/image (842).png" alt=""><figcaption></figcaption></figure>
 
-A confirmation pop-up box is displayed to confirm if the Slack channel (entered in the second step) must be used only for OneDrive DLP integration or all the Nightfall integrations.&#x20;
+A confirmation pop-up box is displayed to confirm if the Slack channel (entered in the second step) must be used only for Exchange Online DLP integration or all the Nightfall integrations.&#x20;
 
-4. Select **No, only integration level** to use the Slack channel only for OneDrive DLP, or select **Yes, please** to use the selected Slack channel for all the Nightfall integrations.&#x20;
+4. Select **No, only integration level** to use the Slack channel only for Exchange Online DLP, or select **Yes, please** to use the selected Slack channel for all the Nightfall integrations.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (843).png" alt=""><figcaption></figcaption></figure>
 
@@ -79,11 +81,11 @@ The **Team** and **Channel** drop-down menus are displayed.&#x20;
 
 <figure><img src="../../.gitbook/assets/imageedit_8_4300516314.png" alt=""><figcaption></figcaption></figure>
 
-A confirmation pop-up box is displayed to confirm if the Email ID (entered in the second step) must be used only for OneDrive DLP integration or all the Nightfall integrations.&#x20;
+A confirmation pop-up box is displayed to confirm if the Email ID (entered in the second step) must be used only for Exchange Online DLP integration or all the Nightfall integrations.&#x20;
 
-4. Select **No, only integration level** to use the Slack channel only for One Drive DLP, or select **Yes, please** to use the selected Slack channel for all the Nightfall integrations.&#x20;
+4. Select **No, only integration level** to use the Slack channel only for Exchange Online DLP, or select **Yes, please** to use the selected Slack channel for all the Nightfall integrations.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (161).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (162).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Configuring Webhook as an Alert Channel
 
@@ -125,9 +127,9 @@ This is part of alert event consumption and can be ignored.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (847).png" alt=""><figcaption></figcaption></figure>
 
-A confirmation pop-up box is displayed to confirm if the JIRA settings configured for the OneDrive DLP integration must be applied to all the other Nightfall integrations too.&#x20;
+A confirmation pop-up box is displayed to confirm if the JIRA settings configured for the **Exchange Online** DLP integration must be applied to all the other Nightfall integrations too.&#x20;
 
-6. Select **No, only integration level** to use the configurations only for OneDrive DLP, or select **Yes, please** to use the selected JIRA configurations for all the Nightfall integrations.&#x20;
+6. Select **No, only integration level** to use the configurations only for Exchange Online DLP, or select **Yes, please** to use the selected JIRA configurations for all the Nightfall integrations.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (848).png" alt=""><figcaption></figcaption></figure>
 

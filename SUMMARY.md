@@ -73,7 +73,7 @@
 ## Dashboard and Events <a href="#dashboard" id="dashboard"></a>
 
 * [Nightfall Dashboard](dashboard/overview.md)
-* [Sensitive Data Protection Events](dashboard/sdp_events/README.md)
+* [Data Detection and Response Events](dashboard/sdp_events/README.md)
   * [Filtering Events](dashboard/sdp_events/filtering.md)
   * [Event Filter Operators](dashboard/sdp_events/filter_operators.md)
   * [Applying Actions on Events](dashboard/sdp_events/event_actions.md)
@@ -231,6 +231,25 @@
     * [Configure Advanced Settings in Microsoft Teams](microsoft-365/microsoft_teams/policies/advanced_settings.md)
     * [Risk Score in Microsoft Teams Policies](microsoft-365/microsoft_teams/policies/risk_score.md)
     * [Manage Microsoft Teams Events](microsoft-365/microsoft_teams/policies/events.md)
+
+## Nightfall for Microsoft Exchange Online <a href="#microsoft-exchange" id="microsoft-exchange"></a>
+
+* [Getting Started](microsoft-exchange/getting_started/README.md)
+  * [Microsoft Exchange Requirements](microsoft-exchange/getting_started/requirements.md)
+  * [Setting up Directory Sync](microsoft-exchange/getting_started/directory_sync.md)
+  * [Installing Microsoft Exchange Online](microsoft-exchange/getting_started/installing-microsoft-exchange-online/README.md)
+    * [Create Connectors](microsoft-exchange/getting_started/installing-microsoft-exchange-online/create-connectors.md)
+    * [Create Rules](microsoft-exchange/getting_started/installing-microsoft-exchange-online/create-rules.md)
+    * [Create MX Record](microsoft-exchange/getting_started/installing-microsoft-exchange-online/create-mx-record.md)
+* [Nightfall for Microsoft Exchange Online](microsoft-exchange/exchange_online/README.md)
+  * [Configure Alerts for Exchange Online](microsoft-exchange/exchange_online/integration_alerts.md)
+  * [Configure Policies for Exchange Online](microsoft-exchange/exchange_online/policies/README.md)
+    * [Select Integration in Exchange Online](microsoft-exchange/exchange_online/policies/integration.md)
+    * [Configure Scope for Exchange Online](microsoft-exchange/exchange_online/policies/scope.md)
+    * [Configure Detection Rules in Exchange Online](microsoft-exchange/exchange_online/policies/detection_rules.md)
+    * [Configure Advanced Settings in Exchange Online](microsoft-exchange/exchange_online/policies/advanced_settings.md)
+    * [Risk Score in Exchange Online](microsoft-exchange/exchange_online/policies/risk_score.md)
+    * [Manage Exchange Online Events](microsoft-exchange/exchange_online/policies/events.md)
 
 ## Nightfall for Gmail  <a href="#gmail" id="gmail"></a>
 

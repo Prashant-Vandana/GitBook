@@ -140,7 +140,7 @@ Navigate to the integration for which you would be interested in setting up a we
 
 You may also add HTTP Headers to send authentication tokens or other content using the **Add Headers** button.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1284).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Once your header key and value is entered you may obfuscate it by clicking on the "lock" icon next to the value field for the header. Click the **Save** button to persist your changes to the headers.
 

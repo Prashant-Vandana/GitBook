@@ -46,7 +46,7 @@ Once the installation is complete, you can view the Nightfall logo on the top ri
 2. Search **Nightfall DLP for Browsers** in the search bar.&#x20;
 3. Click Add to **Firefox**.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1284).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1284) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 A confirmation window is displayed as follows.&#x20;
 
