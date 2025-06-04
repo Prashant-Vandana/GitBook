@@ -36,7 +36,7 @@ To configure alerts at the integration level:
 3. Scroll down to the **Exchange Online Alerting** section.
 4. You can configure one or multiple alert channels.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Configuring Slack as an Alert Channel
 

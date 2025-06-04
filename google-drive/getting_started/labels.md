@@ -49,17 +49,17 @@ Once the scope is added, Nightfall admins must enable the Google Drive Label API
 1. Navigate to the Google Drive Labels API from the GCP console that can be found [here](https://console.cloud.google.com/apis/library/drivelabels.googleapis.com).&#x20;
 2. Click the **Select a Project** menu.
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 The list of Google projects is displayed.&#x20;
 
 3. Select a Project that has the Service Account, used to install the Nightfall Google Drive integration
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 3. Click **Enable**.
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Important**
