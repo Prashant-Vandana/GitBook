@@ -1,10 +1,10 @@
 # Create Connectors
 
-Microsoft Exchange Online uses connectors to manage inbound and outbound email flow. You must create an outbound connector that defines the Nightfall server to which emails must be redirected for scanning, and an inbound connector that defines how to identify emails scanned and routed to Exchange by Nightfall.
+Microsoft Exchange uses connectors to manage inbound and outbound email flow. You must create an outbound connector that defines the Nightfall server to which emails must be redirected for scanning, and an inbound connector that defines how to identify emails scanned and routed to Exchange by Nightfall.
 
 ## Create Outbound Connector
 
-1. Navigate to the **Exchange admin center** page from your Exchange Online account. &#x20;
+1. Navigate to the **Exchange admin center** page from your Exchange account. &#x20;
 2. Expand **Mail flow** and select **Connectors**.
 
 <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfUfwVjmYZAza24drOlcDekE_Q7_n8V87eWMcDRW_qIWlMa3LdGghdYDqLXGsMs1nQ9rfunW7ap7Z_foGUwZBmeFedrIpQi_2Fg2ODRYOi4GxdBm6G0zcp09X5fm1_9rnvaBXuUBQ?key=gXxqXq4O-toSF3b-7YIbPg" alt="" width="563"><figcaption></figcaption></figure>

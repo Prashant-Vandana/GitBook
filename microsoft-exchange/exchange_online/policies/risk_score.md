@@ -1,10 +1,10 @@
 ---
 description: >-
   Learn how to configure risk score and name a Nightfall policy created for
-  Exchange Online
+  Exchange
 ---
 
-# Risk Score in Exchange Online
+# Risk Score in Exchange
 
 In this final stage, you assign a name to the policy, verify your configurations, and create\
 the policy.

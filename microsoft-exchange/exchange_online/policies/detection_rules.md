@@ -1,10 +1,10 @@
 ---
 description: >-
   Learn how to configure the detection rules section in Nightfall policies
-  created for Exchange Online
+  created for Exchange
 ---
 
-# Configure Detection Rules in Exchange Online
+# Configure Detection Rules in Exchange
 
 In this section, you can select the Detection rules for the policy and If not already created, you can create detection rules. To learn more about how to configure detection rules, see[ ](https://help.nightfall.ai/nightfall-ai/nightfall-for-slack/installation-instructions-nightfall-for-slack-1/configuring-detection-rules)[Configuring Detection Rules](https://help.nightfall.ai/detection_platform/create_detection_rules).
 

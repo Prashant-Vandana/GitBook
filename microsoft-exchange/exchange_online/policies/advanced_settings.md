@@ -1,10 +1,10 @@
 ---
 description: >-
-  Learn how to configure the advanced setting section in Nightfall policies
-  created for Exchange Online.
+  Learn how to configure the advanced settings section in Nightfall policies
+  created for MS Exchange.
 ---
 
-# Configure Advanced Settings in Exchange Online
+# Configure Advanced Settings in Exchange
 
 This stage allows you to select notification channels if a policy violation occurs. The notification alerts are sent at two levels.
 

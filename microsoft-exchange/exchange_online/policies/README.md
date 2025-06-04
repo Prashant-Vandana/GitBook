@@ -1,8 +1,8 @@
 ---
-description: Learn how to configure a detection policy for Nightfall for Exchange Online.
+description: Learn how to configure a detection policy for Nightfall for Exchange.
 ---
 
-# Configure Policies for Exchange Online
+# Configure Policies for Exchange
 
 DLP policies are a set of rules that include specific conditions, actions, and exceptions that monitor and filter data. DLP policies also enable you to remediate any leakage of sensitive information from within your organization.
 
@@ -22,7 +22,7 @@ Here are a few important questions to ask before configuring your policies:
 
 You can now configure policies on the Microsoft Teams integration to determine which tenants and teams must be monitored, and which ones excluded. You can also automate the remediation actions that you want Nightfall to perform on a policy violation.
 
-The following documents help you setup Policies on Exchange Online.
+The following documents help you setup Policies on Exchange.
 
 [Integration](https://help.nightfall.ai/nightfall-ai/nightfall-for-microsoft-365/nightfall-for-microsoft-teams/configuring-policies/integration)
 

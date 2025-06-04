@@ -1,8 +1,8 @@
 ---
-description: Learn how to configure the Scope section for Exchange Online.
+description: Learn how to configure the Scope section for Exchange.
 ---
 
-# Configure Scope for Exchange Online
+# Configure Scope for Exchange
 
 The Scope section allows you to select specific mailboxes to be monitored. Once you select the mailboxes, you can further add granular level filters to only monitor emails from specific senders and recipients.&#x20;
 

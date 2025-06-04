@@ -1,12 +1,10 @@
 ---
-description: >-
-  Learn how you can select the Exchange Online integration in a Nightfall
-  policy.
+description: Learn how you can select the Exchange integration in a Nightfall policy.
 ---
 
-# Select Integration in Exchange Online
+# Select Integration in Exchange
 
-In this stage, you select the Integration for which the policy is created. In this case, the Microsoft Exchange Online integration must be selected.&#x20;
+In this stage, you select the Integration for which the policy is created. In this case, the Microsoft **Exchange Online** integration must be selected.&#x20;
 
 1. Click **Policies** from the left menu.
 2. Click **+ New Policy**.

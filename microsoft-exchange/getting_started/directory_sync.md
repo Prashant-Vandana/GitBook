@@ -9,5 +9,5 @@ To monitor Emails, within MS Outlook, Nightfall requires the user information fr
 {% hint style="success" %}
 Important
 
-If you are using Nightfall for Microsoft 365 (OneDrive or MS Teams) and have already configured Directory Sync, you need not configure it again for Exchange Online.&#x20;
+If you are using Nightfall for Microsoft 365 (OneDrive or MS Teams) and have already configured Directory Sync, you need not configure it again for Exchange.&#x20;
 {% endhint %}
