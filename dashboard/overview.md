@@ -4,172 +4,118 @@ description: Learn how to use the Nightfall Dashboard.
 
 # Nightfall Dashboard
 
-The Nightfall Dashboard provides centralized, aggregated insights across all native integrations in the Nightfall console. The Nightfall dashboard enables you to quickly determine, at a high level, the types, quantities, and trends of sensitive data violations with the ability to break down and filter these violations based on particular integrations, filters, and likelihoods, over various periods of time.
+The Nightfall Dashboard delivers a single‑pane view of your security posture, consolidating data from every native integration in your Nightfall console. At a glance, you’ll see:
 
-The dashboard consists of various visualizations like widgets, charts, and tables. You can apply filters to view data specific to a time period, integration, detector, status, and so on. The Nightfall Dashboard automatically refreshes every few minutes.&#x20;
+* **Active Threats**: Instantly surface and prioritize your highest‑risk alerts—click any item to jump straight to the violation details and start remediation.
+* **Insights**: Analyze trends in event volume, detection accuracy, and resolution ROI to optimize your security operations continuously.
+* **Environment**: Track scan volume, endpoint coverage, and capacity usage across all integrations in real-time.
 
-The various tasks that you can perform on the Dashboard are as follows.&#x20;
+Every visualization—widget, chart, or table—is interactive. Use filters for date range, integration, detector, status, and more to drill down into the exact data you need.
 
-## View Latest Data
+## Active Threats&#x20;
 
-The Dashboard displays the date and time when the data was last refreshed. The Nightfall dashboard refreshes automatically every few minutes. You can manually trigger a refresh by refreshing your browser.&#x20;
+This section surfaces your most urgent threats in real-time so that you can address them quickly. Click any chart segment to jump straight to the corresponding violations screen—no manual searches or sorting required.
 
-## Filtering Data
+**Detection and Response Events**: This is a semi-circle visual display sall unresolved sensitive‑data events, broken out by risk level (Critical, High, Medium, Low). Click on a risk segment to navigate directly to those violations.
 
-Nightfall provides you with various filters to slice and dice data on the dashboard. This ensures that you view data that is specific to your requirements. The various filters are described as follows.&#x20;
+**Exfiltration Events**: Total exfiltration incidents logged over the last 30 days. Click to drill into the Events list and resolve threats.
 
-### Old Data Filter
+**Posture Events**: This widget displays the number of posture‑related issues (e.g., misconfigurations or compliance gaps) recorded in the past 30 days. You can click the widget to drill down to the Events list and resolve them.&#x20;
 
-This filter allows you to view historical data. You can choose to view data for the last 7, 30, 90, 120, 180 days, or set a custom date range. When you apply a specific time period, all the data on the dashboard is fetched from the selected time period till the current date. For instance, assume that the current date is 1 December 2023. If you select the time filter as Last 7 days, the data is displayed from 25 Nov 2023 to 1 December 2023. Similarly, if you select the time filter as last 30 days, the data is displayed from November 2, 2023, to December 1, 2023. By default, this filter displays the data for the last 7 days. You can also set a custom date range.&#x20;
+**D\&C Events**: This widget displays the number of data classification events recorded in the past 30 days. You can click the widget to drill down to the Events list and resolve them.
 
-<figure><img src="../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
+**Encryption Events**: This widget displays the number of encryption events recorded in the past 30 days. You can click the widget to drill down to the Events list and resolve them.
 
-### Miscellaneous Filters
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
-The miscellaneous filters allow you to apply filters on various Nightfall entities. The entities are described as follows.&#x20;
+## Insights&#x20;
 
-#### Detector
+This section enables you to monitor and optimize your security operations over time with metrics on detection accuracy, resolution efficiency, and ROI—across SecOps teams, end users, and automation.
 
-This filter facilitates you to view data specific to a Detecter.&#x20;
+This section displays the following widgets and charts.&#x20;
 
-#### Integration
+* **Events Over Time**: This bar graph displays the number of Events recorded across the selected time period. The x-axis represents time, and the y-axis represents the number of events. Data is segmented by integration, risk, policy, or resolution as applicable for the integration. You can click a bar to drill down to the list of respective events. You can also use the filter to view Event data specific to Data detection and Response, Posture, Exfiltration and data classification. Furthermore, you can also filter data based on specific time period.
+* **Remediation Rate**: This widget displays the percentage of events resolved. Data is segmented as follows:
+* **Remediated**: Events actively resolved to mitigate potential threats either by an Admin, End-User, or Automation.
+* **Ignored**: Events that require no further action.
+* **False Positives (FP)**: Events annotated as false alerts either by an Admin or End-User.
+* **Business Justification**: Events dismissed with a provided business justification either by an Admin or End-User.
+* **FP/Ignore Rate**: This widget displays the percentage of events that are either ignored or classified as business justified or false positives. This metric reveals the noise level in your alerting system, showing how effectively your policy triggers and detection models minimize unnecessary alerts.&#x20;
+* **EU/Automation Rate**: This widget measures the proportion of event management tasks handled by end-users and automated systems as opposed to those managed manually by the security operations team.&#x20;
+* **Mean Time to Resolution**: This chart displays the average time taken to resolve an event from creation to closure. It provides valuable insights into the efficiency and responsiveness of your incident management process, helping reduce resolution times and minimize the risk of exposure.
 
-This filter facilitates you to view data specific to an Integration&#x20;
+<figure><img src="../.gitbook/assets/image (1300).png" alt="" width="563"><figcaption></figcaption></figure>
 
-#### Likelihood
+*   **Most Active Policies**
 
-This filter facilitates you to view data specific to a Likelihood of sensitive data being detected.
+    The Most Active Policies widget tracks security security events—one policy trigger each time a scanned resource contains ≥1 finding.
 
-#### Status
+    * **Findings vs. Events**: Findings count individual detections (documents can have thousands); events count one trigger per resource.
+    * **True Positive Events**: Policy triggers that correctly identify real security risks.
+    * **Ignored Events**: Triggers you’ve chosen to dismiss.
+      * **Business Justification Findings**: Annotated by admins or end-users to explain why a finding is acceptable (e.g., “Test data” or “Allowed by process”).
+    * **False Positive Events**: Triggers later overturned as false alarms.
+    * **Expired Events**: Triggers over 30 days old with no follow-up.
 
-This filter facilitates you to view data specific to the status of Violation. Basically, you can use this filter to view violations caused by a specific user(s
+    These metrics are essential for refining your policy thresholds and cutting alert fatigue. Drill into any ignored or false-positive segment to inspect the underlying events, tweak rules or scopes, and confidently turn on automation.
+*   **Most Active Detectors**
 
-#### User
+    The Most Active Detector widget tracks findings—each time our models flag sensitive data in a scanned document.
 
-This filter facilitates you to view data specific to users who triggered violations.
+    * **Findings vs. Events**: Findings count individual detections (documents can have thousands); events count one trigger per resource.
+    * **True Positive Findings**: Genuine security issues that have been resolved or confirmed.
+    * **Ignored Findings**: Linked to violations you’ve dismissed.
+    * **Business Justification Findings**: Annotated by admins or end-users to explain why a finding is acceptable (e.g., “Test data” or “Allowed by process”).
+    * **False Positive Findings**: Marked as false alarms.
+    * **Expired Findings**: Older than 30 days with no action.
 
-To apply a filter:
+    These metrics are vital for eliminating detection noise on your dataset. Your annotations feed into model retraining, boosting precision so you can safely expand automated actions. This widget is not currently clickable.
+* **Highest Risk Users**: This chart provides an overview of the users generating the highest number of detection events, segmented by risk score. It helps you identify outliers and pinpoint areas where specific user behaviours or data hygiene practices may need improvement.&#x20;
+* **End-User Remediation Events**: This chart provides administrators with insights into end-user resolution actions by categorising requests into:
+  * **Pending**: Requests awaiting a response.
+  * **Remediated**: Cases where users have taken corrective action.
+  * **Justification**: Instances where a business justification led to the event being ignored.
+  * **False Positive**: Cases where users have annotated the event as a false positive.
 
-1. Click the **Filter** button.
-2. Click **+ Add Filter**.
-3. Select a filter Entity from the **When** drop-down menu. The options in the **Is** drop-down menu are based on the filter entity selected.
-4. Select an option or multiple in the **Is** drop-down menu. For instance, if you selected **Integration** as the entity, then you must select the check boxes for the integrations whose data you wish to view.&#x20;
-5. (Optional) Repeat steps 2-5 to add multiple filters.&#x20;
-6. Click **Apply**.
+When you click a segment it opens the detailed event information in the corresponding list view for rapid review and analysis.
 
-<figure><img src="../.gitbook/assets/GIF Recording 2023-11-25 at 5.40.33 PM.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1301).png" alt="" width="563"><figcaption></figcaption></figure>
 
-{% hint style="info" %}
-* You can add multiple filters. Nightfall allows you to add a maximum of three filters.
-* When you add multiple filters, logical AND operation is applied between the filters. As a result, only the data that matches all the applied filters is displayed. &#x20;
-* To remove the miscellaneous filters, click the **Reset** button.
-{% endhint %}
+## Environment&#x20;
 
-<figure><img src="../.gitbook/assets/GIF Recording 2023-11-25 at 5.56.02 PM.gif" alt=""><figcaption></figcaption></figure>
+Get a high‑level snapshot of your Nightfall deployment—scan volume, endpoint coverage, and capacity health—all in one place.
 
-## Analysing Visualizations
+**Data Pack Usage**: This Data Usage widget provides an overview of your data scanning consumption versus your data purchased. Monitor usage trends and be alerted when additional capacity may be needed.
 
-The Nightfall Dashboard displays a list of widgets, charts, and tables. These visualizations are described as follows. The data displayed on the visualizations depends on the filters applied.
+**MacOS Endpoints**: The Mac Endpoint widget shows the number of deployed endpoints for Mac devices. Quickly assess your endpoint coverage and ensure all devices are adequately protected.
 
-### Widgets
+**Windows Endpoints**: The Windows Endpoint widget shows the number of deployed endpoints for Windows devices. Quickly assess your endpoint coverage and ensure all devices are adequately protected.
 
-The Nightfall Dashboard displays the following widgets.&#x20;
+**Data Scanned**: This widget displays the total volume of items and data scanned. Additionally, you can also view the amount of data used for scanning for each integration. Metrics for real-time scans and historical audits are provided. You can choose to view the data for the past 1 month, 3 months, 6 months, 1 year, or 2 years.
 
-#### Total Data Scanned
-
-This widget displays the amount of data scanned by Nightfall. You can view the data scanned in real-time and also historically. This widget also displays a line chart. This line chart shows data scanned on each day when you hover over the chart. The x-axis of this chart changes based on the filters applied in the [#historic-data-filter](overview.md#historic-data-filter "mention").
-
-<figure><img src="../.gitbook/assets/GIF Recording 2023-11-25 at 6.20.59 PM.gif" alt=""><figcaption></figcaption></figure>
-
-Apart from the total scanned data, this widget also displays data scanned at a granular level; you can view the real-time and historical data scanned for each integration. When you hover over an integration, you can view the real-time and historical data scanned for the integration. If you have applied a miscellaneous filter to display data for a specific integration, granular data is displayed only for the filtered integration.&#x20;
-
-<figure><img src="../.gitbook/assets/GIF Recording 2023-11-25 at 6.22.41 PM.gif" alt=""><figcaption></figcaption></figure>
-
-#### All Violations
-
-This widget displays all the violations recorded in Nightfall during the time period selected in the [#historic-data-filter](overview.md#historic-data-filter "mention"). This widget displays the number of violations irrespective of their status ( New, Active, Pending, Resolved, and Expired). If you apply any [#miscellaneous-filters](overview.md#miscellaneous-filters "mention"), violations are displayed only for the filters applied.
-
-#### Active Violations
-
-his widget displays all the actioned violations recorded in Nightfall during the time period selected in the [#historic-data-filter](overview.md#historic-data-filter "mention"). These are the violations that are generated but no action has been taken on them yet. If you do not take any action on an active violation within 30 days from the date on which it was generated, the violation expires. If you apply any [#miscellaneous-filters](overview.md#miscellaneous-filters "mention"), violations are displayed only for the filters applied.
-
-#### Actioned Violations
-
-This widget displays all the actioned violations recorded in Nightfall during the time period selected in the [#historic-data-filter](overview.md#historic-data-filter "mention"). These are the violations on which you have acted (notified in Email or Slack, created JIRA ticket, and so on) but have not yet marked as resolved. This widget displays the number of violations whose current status is active. If you apply any [#miscellaneous-filters](overview.md#miscellaneous-filters "mention"), violations are displayed only for the filters applied.
-
-You can also view a line chart at the bottom of these three widgets. This line chart shows the number of violations generated each day. The x-axis of this chart changes based on the filters applied in the [#historic-data-filter](overview.md#historic-data-filter "mention").
-
-<figure><img src="../.gitbook/assets/GIF Recording 2023-11-25 at 8.06.03 PM.gif" alt=""><figcaption></figcaption></figure>
-
-**Percentile Difference Value**
-
-All the widgets display a percentile value, apart from the actual value. This percentile value is either in positive or negative. Nightfall generates this value by the following method.&#x20;
-
-* The current value of the widget and the filter value selected in [#historic-data-filter](overview.md#historic-data-filter "mention") are considered.&#x20;
-* This value is compared with the equivalent preceding time period. If the current value is better than the preceding value, the value is converted to a percentage and displayed as a positive result. However, if the current value is worse than its preceding value, the percentile difference is displayed in a negative.
-
-<figure><img src="../.gitbook/assets/image (367).png" alt=""><figcaption></figcaption></figure>
-
-* For instance, consider the above image. The value of **Active Violations** is 25. The selected [#historic-data-filter](overview.md#historic-data-filter "mention") is **Last 7 Days**. Let's assume that the current date (today's date) is 1 Dec 2023. This implies that there were a total of 25 violations from 25 Nov to 1 Dec (last 7 days).&#x20;
-* The value 25 is compared with the equivalent preceding time period (7 days prior to 25 Nov which is Nov 19 to Nov 25). In this case, the current value 25 is greater than its preceding value by 76%. This implies that active violations increased by 76% in a span of a week. Hence, the percentile difference value is displayed as -76%. (An increase in number of violations is not a good sign. Hence it is displayed in red with a negative sign).&#x20;
-* The percentile difference value always compares the current value with its equivalent preceding value. In the above case, the [#historic-data-filter](overview.md#historic-data-filter "mention") was selected as the **Last 7 Days**. hence the current value was compared with its preceding 7 days' value. If you select **Last 30 Days** as [#historic-data-filter](overview.md#historic-data-filter "mention"), then the current value is compared to the preceding 30 days' value.
-
-The above calculation method is applied in the calculation of percentile difference value for all the widgets.&#x20;
-
-### Charts
-
-The Nightfall Dashboard consists of two bar charts. The bar charts are described as follows.&#x20;
-
-#### Top Detectors
-
-This bar chart displays the top five detectors with the highest number of violations during the time period selected in [#historic-data-filter](overview.md#historic-data-filter "mention"). This bar chart consists of the top five detectors on the x-axis and the number of violations on the y-axis. Each bar represents a detector. When you hover over a bar, you can view the number of violations triggered by the detector.
-
-<figure><img src="../.gitbook/assets/GIF Recording 2023-11-26 at 3.31.00 PM.gif" alt=""><figcaption></figcaption></figure>
-
-#### Top Policies
-
-This bar chart displays the top five policies with the highest number of violations during the time period selected in [#historic-data-filter](overview.md#historic-data-filter "mention"). This bar chart consists of the top five policies on the x-axis and the number of violations on the y-axis. Each bar represents a policy. When you hover over a policy, you can view the number of violations triggered by the detector.
-
-<figure><img src="../.gitbook/assets/GIF Recording 2023-11-26 at 3.34.58 PM (1).gif" alt=""><figcaption></figcaption></figure>
-
-{% hint style="info" %}
-## Violation vs Findings
-
-The data displayed in the above bar charts contain violation data. Each violation may further have multiple Findings. To check the number of findings in each Violation, see . To understand the difference between Violations and Findings, see [#violation-vs-finding](sdp_events/#violation-vs-finding "mention").
-{% endhint %}
-
-### Tables
-
-The Tables section on the Nightfall Dashboard consists of the following.&#x20;
-
-#### Highest Risk Users
-
-This table contains the details of the users who have triggered the highest number of violations. The columns of this table display details like user name, number of violations, and the integrations on which the violations are caused. You can rearrange the contents of the **User** column alphabetically and the **Violation Count** column in increasing or decreasing order.
-
-<figure><img src="../.gitbook/assets/GIF Recording 2023-11-26 at 3.47.28 PM.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1302).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ## Generating Reports
 
-The Nightfall Dashboard allows you to generate reports. The Dashboard currently supports four types of reports.&#x20;
+Nightfall allows you download a PDF copy of the Dashboard data or email the dashboard data. If you choose to download a report, a PDF file containing the Dashboard data is downloaded.
+
+If you choose to email the Dashboard data the following types of reports are present in the downloaded data.&#x20;
 
 * **Sensitive Data Exposure**: This report consists of information like the location of sensitive data, the nature of sensitive data, and the overall risk associated with it.&#x20;
 * **Policy Violations**: This report provides information on the policies that are generating the highest number of violations.&#x20;
 * **Highest Risk Users**: This report provides information about users who are triggering the highest number of violations across all integrations.&#x20;
 * **Total Data Scanned**: This report displays the total data scanned by Nightfall across all integrations.&#x20;
 
-You can select the historical time period for which you wish to generate the reports. The time period is the same as the [#historic-data-filter](overview.md#historic-data-filter "mention").
+To email a Dashboard Report:
 
-To generate a Report:
-
-1. Click **Generate Reports**.&#x20;
+1. Click **Generate Reports** and select **Send to email.**
 2. Select the check boxes of the reports to be included. Click **Select All** to include all the reports.&#x20;
-3. Select the historic time period for which you wish to generate the report.
-4. Click **Generate**. A pop-up window appears that confirms the Email ID to which reports will be sent.
-5. Click **Done**.
+3. (Optional) Click **Add Recipient** to add additional recipients. By default the report is mailed to the logged in user.
+4. Select the time period for which you wish to download the report.
+5. Click **Generate**. A pop-up window appears that confirms the Email ID to which reports will be sent.
+6. Click **Done**.
 
-The Report is mailed to the Email ID of the logged-in user.
-
-<figure><img src="../.gitbook/assets/GIF Recording 2023-11-26 at 4.05.21 PM.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1303).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ## Analyzing Downloaded Reports
 
@@ -177,7 +123,7 @@ When you generate a report, it is sent as an Email to the logged-in user. This e
 
 <figure><img src="../.gitbook/assets/GIF Recording 2023-11-28 at 2.22.02 PM (1).gif" alt=""><figcaption></figcaption></figure>
 
-A folder is downloaded to your system. The folder is named as **Nightfall\_Reports\_**_**\<date on which report was gnerated>\_\<historical time period>**_. This folder contains the reports that you selected for download in step 2 of the [#generating-reports](overview.md#generating-reports "mention") section. All the downloaded files are in CSV format.&#x20;
+A folder is downloaded to your system. The folder is named as **Nightfall\_Reports\_**_**\<date on which report was generated>\_\<historical time period>**_. This folder contains the reports that you selected for download in step 2 of the [#generating-reports](overview.md#generating-reports "mention") section. All the downloaded files are in CSV format.&#x20;
 
 The following image shows a folder downloaded on 26-11-2023 for the last 30 days. All four reports were selected for download hence you can see four CSV files.&#x20;
 
