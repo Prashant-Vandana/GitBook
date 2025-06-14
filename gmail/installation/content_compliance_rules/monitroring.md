@@ -53,7 +53,7 @@ Existing Gmail DLP customers who have configured Gmail DLP previously, can skip 
 4. Type the following host name.&#x20;
 
 ```http
-http://2r2xfv8u7uz5.fips.qbns.mail-manager-smtp.amazonaws.com/
+2r2xfv8u7uz5.fips.qbns.mail-manager-smtp.amazonaws.com
 ```
 
 5. Enter **25** as the port number.&#x20;
