@@ -163,14 +163,14 @@ There are two fields; **Header key** and **Header value**.
 11. Navigate to the **Gmail settings** page on the Nightfall UI and copy the value from the **Change envelope recipient with** field, located under the **Messaging Modification** section.
 12. Return to the Google Admin Workspace window and paste the copied value in the **Replace recipient** field. This is the email address to which emails must be routed for scanning.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 
 
 13. Scroll down to the **Encryption (onward delivery only)** section and select the **Require secure transport (TLS)** check box.&#x20;
 14. Click **SAVE**.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Onboarding Instructions Starting June 2025" %}

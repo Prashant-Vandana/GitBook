@@ -28,7 +28,11 @@ To use Google Drive labels, Nightfall admins must perform the following configur
 
 5. Enter the client ID and click **Apply**.&#x20;
 
-<figure><img src="../../.gitbook/assets/imageedit_10_8177390576.jpg" alt="" width="563"><figcaption></figcaption></figure>
+{% hint style="info" %}
+You can use the Client ID stored during the installation of Nightfall for Google Drive integration. The details can be found in this [Nightfall documentation](installation.md) (step 4).
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/imageedit_10_8177390576.jpg" alt="" width="375"><figcaption></figcaption></figure>
 
 The matching account is displayed.&#x20;
 
@@ -49,7 +53,7 @@ Once the scope is added, Nightfall admins must enable the Google Drive Label API
 1. Navigate to the Google Drive Labels API from the GCP console that can be found [here](https://console.cloud.google.com/apis/library/drivelabels.googleapis.com).&#x20;
 2. Click the **Select a Project** menu.
 
-<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 The list of Google projects is displayed.&#x20;
 
@@ -59,7 +63,7 @@ The list of Google projects is displayed.&#x20;
 
 3. Click **Enable**.
 
-<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 **Important**
