@@ -6,6 +6,10 @@ description: >-
 
 # Create Content Compliance Rule - Monitoring
 
+{% hint style="info" %}
+This document is only applicable to new customers who are setting up Gmail DLP for the first time. If you are an existing customer and have setup Gmail DLP previously, refer [this documentation](https://help.nightfall.ai/gmail/installation/content_compliance_rules/monitroring-1).
+{% endhint %}
+
 The first content compliance rule is used to monitor all outgoing emails.&#x20;
 
 {% hint style="info" %}
@@ -24,46 +28,31 @@ All the headers and expressions required to create the compliance rules are avai
 
 <figure><img src="../../../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
 
-## Content Compliance
+## Content Compliance Rule
 
 The steps to create content compliance rule are as follows.&#x20;
 
 1. Login to your Google Workspace with an admin account.
 2. Navigate to the admin console.&#x20;
 3. From the left menu, expand **Apps** > **Google Workspace > Gmail.**
+4. Scroll down and click **Hosts**.
+5. Click **ADD ROUTE**.
 
-{% hint style="success" %}
-**Important**
+<figure><img src="../../../.gitbook/assets/image (1306).png" alt=""><figcaption></figcaption></figure>
 
-If you are a new Gmail DLP customer who is setting up Gmail DLP configuration for the first time, you must execute the steps present in the following **Onboarding Instructions from June 2025** collapsible section.
-
-Existing Gmail DLP customers who have configured Gmail DLP previously, can skip the steps mentioned in the following **Onboarding Instructions from June 2025** collapsible section and proceed with the remaining steps. &#x20;
-{% endhint %}
-
-<details>
-
-<summary>Onboarding Instructions from June 2025</summary>
-
-1. Scroll down and click **Hosts**.
-2. Click **ADD ROUTE**.
-
-<figure><img src="../../../.gitbook/assets/image (5).png" alt="" width="563"><figcaption></figcaption></figure>
-
-3. Enter a name for the mail route.&#x20;
-4. Type the following host name.&#x20;
+6. Enter a name for the mail route.&#x20;
+7. Type the following host name.
 
 ```http
 2r2xfv8u7uz5.fips.qbns.mail-manager-smtp.amazonaws.com
 ```
 
-5. Enter **25** as the port number.&#x20;
-6. Click **SAVE**.
+8. Enter **25** as the port number.&#x20;
+9. Click **SAVE**.
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1307).png" alt="" width="375"><figcaption></figcaption></figure>
 
-</details>
-
-4. Scroll down and click **Compliance**.
+10. Scroll down and click **Compliance**.
 
 <figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
@@ -148,43 +137,15 @@ There are two fields; **Header key** and **Header value**.
 
 <figure><img src="../../../.gitbook/assets/image (113).png" alt="" width="563"><figcaption></figcaption></figure>
 
-{% hint style="success" %}
-**Important**
-
-* If you are a new customer and setting up Gmail DLP for the first time, and have executed the steps in the **Onboarding Instructions from June 2025** collapsible section above, you can click the **Onboarding Instructions Starting June 2025** tab and continue to follow the instructions.&#x20;
-* If you are an existing customer who has setup Gmail DLP at least once and have skipped the steps mentioned in the **Onboarding Instructions from June 2025** collapsible section above, you can refer to the **Onboarding Instructions Before June 2025** tab and continue to follow the instructions.
-
-&#x20;
-{% endhint %}
-
-{% tabs %}
-{% tab title="Onboarding Instructions Before June 2025" %}
-10. Scroll down to the **Envelope recipient** section and select the **Change envelope** recipient check box. A **Replace recipient** radio button field is displayed.
-11. Navigate to the **Gmail settings** page on the Nightfall UI and copy the value from the **Change envelope recipient with** field, located under the **Messaging Modification** section.
-12. Return to the Google Admin Workspace window and paste the copied value in the **Replace recipient** field. This is the email address to which emails must be routed for scanning.
-
-<figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="563"><figcaption></figcaption></figure>
-
-
-
-13. Scroll down to the **Encryption (onward delivery only)** section and select the **Require secure transport (TLS)** check box.&#x20;
-14. Click **SAVE**.
-
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
-{% endtab %}
-
-{% tab title="Onboarding Instructions Starting June 2025" %}
 10. Scroll down to the **Route** section and select the **Change Route** check box.&#x20;
-11. From the drop down menu, select the routing rule created in the collapsible section.&#x20;
+11. From the drop down menu, select the routing rule created in the [#content-compliance-rule](monitroring.md#content-compliance-rule "mention") section (step 5).&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (10).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1308).png" alt="" width="563"><figcaption></figcaption></figure>
 
 12. Scroll down to the **Encryption (onward delivery only)** section and select the **Require secure transport (TLS)** check box.&#x20;
 13. Click **SAVE**.
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt="" width="563"><figcaption></figcaption></figure>
-{% endtab %}
-{% endtabs %}
+<figure><img src="../../../.gitbook/assets/image (1309).png" alt="" width="375"><figcaption></figcaption></figure>
 
 
 
