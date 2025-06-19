@@ -257,6 +257,7 @@
 * [Install Nightfall DLP for Gmail](gmail/installation/README.md)
   * [Configure Content Compliance Rules](gmail/installation/content_compliance_rules/README.md)
     * [Create Content Compliance Rule - Monitoring](gmail/installation/content_compliance_rules/monitroring.md)
+    * [Create Content Compliance Rule - Monitoring](gmail/installation/content_compliance_rules/monitroring-1.md)
     * [Configure Content Compliance Rule - Quarantine](gmail/installation/content_compliance_rules/quarantine.md)
     * [Configure Routing Rules - SMTP Relay Settings](gmail/installation/content_compliance_rules/smtp_relay_settings.md)
 * [Configure Alerts for Gmail](gmail/integration_alerts.md)
