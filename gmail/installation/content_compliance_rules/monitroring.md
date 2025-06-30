@@ -32,7 +32,7 @@ All the headers and expressions required to create the compliance rules are avai
 
 The steps to create content compliance rule are as follows.&#x20;
 
-1. Login to your Google Workspace with an admin account.
+1. Log in to your Google Workspace with an admin account.
 2. Navigate to the admin console.&#x20;
 3. From the left menu, expand **Apps** > **Google Workspace > Gmail.**
 4. Scroll down and click **Hosts**.
@@ -76,7 +76,7 @@ However, Nightfall recommends that you initially configure the rules on a subset
 <figure><img src="../../../.gitbook/assets/image (941).png" alt="" width="563"><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-If you select only the **Outbound** check box, only those emails that are routed out of your organization to external domains, are scanned. If you wish to scan internal emails (emails that are sent between the employees of your organization). you must select the **Internal - Sending** check box.
+If you select only the **Outbound** check box, only those emails that are routed out of your organization to external domains, are scanned. If you wish to scan internal emails (emails that are sent between the employees of your organization), you must select the **Internal - Sending** check box.
 {% endhint %}
 
 ### Step 2 - Add Expressions
@@ -138,7 +138,7 @@ There are two fields; **Header key** and **Header value**.
 <figure><img src="../../../.gitbook/assets/image (113).png" alt="" width="563"><figcaption></figcaption></figure>
 
 10. Scroll down to the **Route** section and select the **Change Route** check box.&#x20;
-11. From the drop down menu, select the routing rule created in the [#content-compliance-rule](monitroring.md#content-compliance-rule "mention") section (step 5).&#x20;
+11. From the dropdown menu, select the routing rule created in the [#content-compliance-rule](monitroring.md#content-compliance-rule "mention") section (step 5).&#x20;
 
 <figure><img src="../../../.gitbook/assets/image (1308).png" alt="" width="563"><figcaption></figcaption></figure>
 
