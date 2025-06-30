@@ -18,7 +18,7 @@ If you select **immediately**, the action is implemented automatically after the
 
 If you select **After**, you must also set the time frame as to when exactly the action must be applied, after detecting the sensitive data.
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 The available actions are described as follows.
 

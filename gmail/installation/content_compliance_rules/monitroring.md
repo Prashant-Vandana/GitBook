@@ -54,7 +54,7 @@ The steps to create content compliance rule are as follows.&#x20;
 
 10. Scroll down and click **Compliance**.
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 When you click **Compliance**, you can view the list of Organization Units (OUs) on the left of the screen (see image below). You can directly configure the compliance rules and routing rules on your production OU (OU at the top most level) by selecting the same.&#x20;

@@ -36,7 +36,7 @@ To configure alerts at the integration level:
 3. Scroll down to the **MS Teams** section.
 4. You can configure one or multiple alert channels.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Configuring Slack as an Alert Channel
 

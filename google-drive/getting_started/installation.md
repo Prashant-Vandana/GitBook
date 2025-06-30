@@ -12,7 +12,7 @@ To install Nightfall for Google Drive:
 2. Click **Integrations** from the left menu.
 3. Click **Manage** on the Google Drive integration.&#x20;
 
-<figure><img src="../../.gitbook/assets/image.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1304).png" alt="" width="563"><figcaption></figcaption></figure>
 
 4. Click **Begin Setup**. 
 

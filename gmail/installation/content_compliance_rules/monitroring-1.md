@@ -49,7 +49,7 @@ The steps to create content compliance rule are as follows.&#x20;
 3. From the left menu, expand **Apps** > **Google Workspace > Gmail.**
 4. Scroll down and click **Compliance**.
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 When you click **Compliance**, you can view the list of Organization Units (OUs) on the left of the screen (see image below). You can directly configure the compliance rules and routing rules on your production OU (OU at the top most level) by selecting the same.&#x20;
@@ -136,7 +136,7 @@ There are two fields; **Header key** and **Header value**.
 11. Navigate to the **Gmail settings** page on the Nightfall UI and copy the value from the **Change envelope recipient with** field, located under the **Messaging Modification** section.
 12. Return to the Google Admin Workspace window and paste the copied value in the **Replace recipient** field. This is the email address to which emails must be routed for scanning.
 
-<figure><img src="../../../.gitbook/assets/image (1304).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1304) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 13. Scroll down to the **Encryption (onward delivery only)** section and select the **Require secure transport (TLS)** check box.&#x20;
 14. Click **SAVE**.

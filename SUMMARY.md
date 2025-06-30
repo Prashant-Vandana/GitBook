@@ -4,7 +4,7 @@
 
 ## Release Notes <a href="#release_notes" id="release_notes"></a>
 
-* [Release Notes 2025](release_notes/nightfall_new_features.md)
+* [Release Notes 2025M](release_notes/nightfall_new_features.md)
 * [Release Notes 2021-2024](release_notes/release_notes_old.md)
 
 ## Introduction <a href="#nightfall_introduction" id="nightfall_introduction"></a>
@@ -321,6 +321,7 @@
 * [Install Nightfall for GenAI apps](gen-ai/installation/README.md)
   * [Install Nightfall DLP on Individual Devices](gen-ai/installation/individual_devices.md)
   * [Install Nightfall DLP Across Organization](gen-ai/installation/mdm.md)
+  * [Install Nightfall DLP with Microsoft Intune](gen-ai/installation/install-nightfall-dlp-with-microsoft-intune.md)
 * [Configure Alerts for GenAI apps](gen-ai/integration_alerts.md)
 * [Creating GenAI Policies from Nightfall Console](gen-ai/policies/README.md)
   * [AI Apps Selection](gen-ai/policies/integration.md)

@@ -59,7 +59,7 @@ The list of Google projects is displayed.&#x20;
 
 3. Select a Project that has the Service Account, used to install the Nightfall Google Drive integration
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 3. Click **Enable**.
 
