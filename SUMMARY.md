@@ -4,7 +4,7 @@
 
 ## Release Notes <a href="#release_notes" id="release_notes"></a>
 
-* [Release Notes 2025M](release_notes/nightfall_new_features.md)
+* [Release Notes 2025](release_notes/nightfall_new_features.md)
 * [Release Notes 2021-2024](release_notes/release_notes_old.md)
 
 ## Introduction <a href="#nightfall_introduction" id="nightfall_introduction"></a>

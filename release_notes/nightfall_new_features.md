@@ -4,14 +4,28 @@ description: This document lists all the features released by Nightfall in 2025.
 
 # Release Notes 2025
 
+## June 2025
+
+This section enlists the feature enhancements released by Nightfall in June 2025.
+
+* **Support for macOS File Upload Blocking:** Nightfall now allows you to automatically block files with sensitive data from being uploaded to untrusted sites. Click [here](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/advanced_settings/automated_action#block-transfer) to learn more about this feature.&#x20;
+* **Automatic Retraining of Image ID Detectors**: The image ID detectors are now equipped with the Automated Supervised learning (ASL) system. This enhances the capabilities of the image IDE detectors. Click [here](../detection_platform/detection_glossary/) to learn more about Nightfall detectors.
+* **New Driver's License Detectors**: Nightfall has now introduced new driving license detectors for the four southeast asian countries Vietnam, Thailand, Myanmar, and Cambodia. Click [here](../detection_platform/detection_glossary/) to learn more about Nightfall detectors.
+* **New Search Operators for Exfiltration Events**: Nightfall has introduced new search operators in Exfiltration. You can use these operators to search specific Exfiltration events.&#x20;
+* **New Upgraded Dashboard**: Nightfall has upgraded the Dashboard window completely to provide more insights and data on various aspects. Click [here](https://help.nightfall.ai/dashboard/overview) to learn more about this feature.
+* **Clipboard Screen Capture Detection**: In Exfiltration, Nightfall now allows you to block users from pasting visual data (images/screenshots) to unsanctioned destinations. Click [here ](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/trigger#clipboard-paste)to learn more about this feature.&#x20;
+* **Clipboard Paste blocking in Windows**: In Exfiltration, Nightfall has now extended the Clipboard paste feature to Windows OS devices (previously this feature was available only in macOS based devices). Click [here ](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/trigger#clipboard-paste)to learn more about this feature.
+* **User and User Group Policies in Windows**: Nightfall has extended the user and user group inclusion and exclusion feature to Windows based devices. You can now include or exclude users and user groups while creating an Exfiltration policy for Windows OS devices. Click [here](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/scope#internal-users) to learn more about this feature.&#x20;
+* **End user Remediation for Windows Devices**: In Exfiltration policies, Nightfall now allows you to configure end user remediation and notification. Click [here](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/advanced_settings/enduser_notification) to learn more about this feature.&#x20;
+
 ## May 2025
 
 This section enlists the feature enhancements released by Nightfall in May 2025.
 
 * **Cloud Sync Monitoring in Windows OS**: In Exfiltration, Nightfall has now extended the cloud sync monitoring feature to devices running on the Windows OS. Click [here ](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/trigger#cloud-sync-app-uploads)to learn more about this feature.
 * **API to Query Exfiltration and Posture Events**: In Developer APIs, Nightfall has now introduced APIs to query Exfiltration and Posture Management data. You can find the Exfiltration APIs [here](https://help.nightfall.ai/developer-api/exfiltration-prevention-apis) and the Posture Management APIs [here](https://help.nightfall.ai/developer-api/posture-management-apis).   &#x20;
-* **Clipboard Paste Block Action for Windows**: In Exfiltration, Nightfall now allows you to block users from pasting data to unsanctioned destinations. Click [here ](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/trigger#clipboard-paste)to learn more about this feature.
-* **Clipboard Monitoring of Visual Data**: In Exfiltration, Nightfall now allows you to block users from pasting visual data (images/screenshots) to unsanctioned destinations. Click [here ](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/trigger#clipboard-paste)to learn more about this feature.
+* **Clipboard Paste Block Action for Windows** (early access): In Exfiltration, Nightfall now allows you to block users from pasting data to unsanctioned destinations. Click [here ](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/trigger#clipboard-paste)to learn more about this feature.
+* **Clipboard Monitoring of Visual Data** (early access): In Exfiltration, Nightfall now allows you to block users from pasting visual data (images/screenshots) to unsanctioned destinations. Click [here ](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/trigger#clipboard-paste)to learn more about this feature.
 * **Lineage Source Tracking in Windows**: In Exfiltration, Nightfall has now extended the lineage source tracking feature to devices running on the Windows OS. Click [here ](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/trigger#browser-uploads)to learn more about this feature.
 
 ## April 2025
