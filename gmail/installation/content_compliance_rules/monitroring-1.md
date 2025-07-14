@@ -3,17 +3,6 @@ description: >-
   Learn how to create a monitoring content compliance rule in the Google
   Workspace.
 hidden: true
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: false
 ---
 
 # Create Content Compliance Rule - Monitoring

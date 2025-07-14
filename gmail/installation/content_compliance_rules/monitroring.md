@@ -140,7 +140,7 @@ There are two fields; **Header key** and **Header value**.
 10. Scroll down to the **Route** section and select the **Change Route** check box.&#x20;
 11. From the dropdown menu, select the routing rule created in the [#content-compliance-rule](monitroring.md#content-compliance-rule "mention") section (step 5).&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (1308).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1310).png" alt="" width="563"><figcaption></figcaption></figure>
 
 12. Scroll down to the **Encryption (onward delivery only)** section and select the **Require secure transport (TLS)** check box.&#x20;
 13. Click **SAVE**.

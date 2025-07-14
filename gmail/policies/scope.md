@@ -129,7 +129,7 @@ Once you select the **Sender** option, you can configure **Users** and **User gr
 * **Monitor Specific**: Select this option to monitor all the emails being sent from specific user group mail IDs. Nightfall populates the name and email IDs of all the user groups whose data was synced from an IdP through the [Directory Sync](https://help.nightfall.ai/nightfall-ai/nightfall-settings/directory-sync) feature. You must select the required user group mail IDs. All the emails sent from the selected user group mail IDs are monitored by Nightfall for sensitive data.
 * **Monitor all, except**: Select this option to exclude user group(s). Emails sent from the excluded user group mail IDs are not monitored by the policy. Once you select this option, you must also select specific user group(s) from the search bar. Nightfall populates the name and email IDs of all the user groups whose data was synced from an IdP through the [Directory Sync](https://help.nightfall.ai/nightfall-ai/nightfall-settings/directory-sync) feature. You must select the required user groups. The emails sent from the selected user group mail IDs are not monitored by Nightfall.
 
-<figure><img src="../../.gitbook/assets/image (660).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (660).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ## Configuring Recipients and Domains
 
