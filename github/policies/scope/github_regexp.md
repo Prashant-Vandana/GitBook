@@ -58,24 +58,15 @@ Similarly, to exclude files nested at multiple levels, you can use escape sequen
 
 This cheat sheet displays the regex to be used for various scenarios.
 
-|                                       Match                                       |                                           Regex                                           |                                                             Comments                                                            |
-| :-------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
-|                                   first/abcd.py                                   |     <pre class="language-regex"><code class="lang-regex">first\/abcd.py
-</code></pre>     |                                 Match a file called abcd.py under a directory called **first**.                                 |
-|               <p>first/abcd.py, first/efgh.py, <br>first/ijkq.py</p>              |      <pre class="language-regex"><code class="lang-regex">first\/.*.py
-</code></pre>      |                              Match any file with .py extension under a directory called **first**.                              |
-|            <p>first/abcd.py,<br>first/abcd.java,<br>first/abcd.cpp</p>            |        <pre class="language-regex"><code class="lang-regex">first\/.*
-</code></pre>       |                                        Match any file under a directory called **first**.                                       |
-|                                first/second/abcd.py                               | <pre class="language-regex"><code class="lang-regex">first\/second\/abcd.py
-</code></pre> |    Match a file called abcd.py under a directory called **second,** which is nested under another direcory called **first**.    |
-|   <p>first/second/abcd.py,<br>first/second/efgh.py, <br>first/second/ijkq.py</p>  |  <pre class="language-regex"><code class="lang-regex">first\/second\/.*.py
-</code></pre>  | Match any file with .py extension under a directory called **second,** which is nested under another direcory called **first**. |
-| <p>first/second/abcd.py,<br>first/second/efgh.java, <br>first/second/ijkq.cpp</p> |                             <pre><code>first\/.*
-</code></pre>                            |           Match any file under a directory called **second,** which is nested under another direcory called **first**.          |
-|                                      abcd.py                                      |         <pre class="language-regex"><code class="lang-regex"> .*.py
-</code></pre>         |               Match a file called abcd.py which is located directly undet the repository and not under any folder.              |
-|                     <p>abcd.py,<br>efgh.java, <br>ijkq.cpp</p>                    |           <pre class="language-regex"><code class="lang-regex">.*
-</code></pre>           |                     Match any file which is located directly undet the repository and not under any folder.                     |
+<table><thead><tr><th align="center">Match</th><th align="center">Regex</th><th align="center">Comments</th></tr></thead><tbody><tr><td align="center">first/abcd.py</td><td align="center"><pre class="language-regex"><code class="lang-regex">first\/abcd.py
+</code></pre></td><td align="center">Match a file called abcd.py under a directory called <strong>first</strong>.</td></tr><tr><td align="center">first/abcd.py, first/efgh.py, <br>first/ijkq.py</td><td align="center"><pre class="language-regex"><code class="lang-regex">first\/.*.py
+</code></pre></td><td align="center">Match any file with .py extension under a directory called <strong>first</strong>.</td></tr><tr><td align="center">first/abcd.py,<br>first/abcd.java,<br>first/abcd.cpp</td><td align="center"><pre class="language-regex"><code class="lang-regex">first\/.*
+</code></pre></td><td align="center">Match any file under a directory called <strong>first</strong>.</td></tr><tr><td align="center">first/second/abcd.py</td><td align="center"><pre class="language-regex"><code class="lang-regex">first\/second\/abcd.py
+</code></pre></td><td align="center">Match a file called abcd.py under a directory called <strong>second,</strong> which is nested under another direcory called <strong>first</strong>.</td></tr><tr><td align="center">first/second/abcd.py,<br>first/second/efgh.py, <br>first/second/ijkq.py</td><td align="center"><pre class="language-regex"><code class="lang-regex">first\/second\/.*.py
+</code></pre></td><td align="center">Match any file with .py extension under a directory called <strong>second,</strong> which is nested under another direcory called <strong>first</strong>.</td></tr><tr><td align="center">first/second/abcd.py,<br>first/second/efgh.java, <br>first/second/ijkq.cpp</td><td align="center"><pre><code>first\/.*
+</code></pre></td><td align="center">Match any file under a directory called <strong>second,</strong> which is nested under another direcory called <strong>first</strong>.</td></tr><tr><td align="center">abcd.py</td><td align="center"><pre class="language-regex"><code class="lang-regex"> .*.py
+</code></pre></td><td align="center">Match a file called abcd.py which is located directly undet the repository and not under any folder.</td></tr><tr><td align="center">abcd.py,<br>efgh.java, <br>ijkq.cpp</td><td align="center"><pre class="language-regex"><code class="lang-regex">.*
+</code></pre></td><td align="center">Match any file which is located directly undet the repository and not under any folder.</td></tr></tbody></table>
 
 
 

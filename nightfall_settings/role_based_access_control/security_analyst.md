@@ -20,13 +20,13 @@ A user with Security Analyst Role has the following permissions
 
 With the **Dashboard** and **Reportin**g permissions, users to view data on the Dashboard, apply filters to the dashboard data, and also generate reports from the Dashboard data.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Take Actions on DLP Violations
 
 With the **DLP Violations** permission, users can take appropriate actions on the DLP violations. They can also share the violation data and export it as a CSV file.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Preview the DLP Violations Content
 

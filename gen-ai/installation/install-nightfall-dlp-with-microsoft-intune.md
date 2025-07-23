@@ -18,7 +18,7 @@ To install the Nightfall Browser Extension from Intune:
 
 4. Select the **Windows** widget or the Windows option under the **Devices** menu.
 
-<figure><img src="../../.gitbook/assets/image.png" alt="" width="563"><figcaption><p><br></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="563"><figcaption><p><br></p></figcaption></figure>
 
 5. Click **Configuration**.
 6. Click **+ Create** and select **+ New Policy**.
@@ -27,7 +27,7 @@ To install the Nightfall Browser Extension from Intune:
    2. **Settings Catalog** as the **Profile Type**.
    3. Click **Create**.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 8. On the **Basics** tab:
    1. Enter a name for the policy
