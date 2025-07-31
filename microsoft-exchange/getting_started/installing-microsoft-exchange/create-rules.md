@@ -59,7 +59,7 @@ You must create this rule only if you wish to implement the quarantine action wh
 
 <figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
-11. Select **Redirect the message** to in the **Do the following** field.&#x20;
+11. Select **Redirect the message** **to** in the **Do the following** field.&#x20;
 12. Select the **hosted quarantine** option. &#x20;
 13. Select **The message headers** option in the **Except if** field.&#x20;
 14. Select **includes any of these words.**
@@ -73,6 +73,6 @@ You must create this rule only if you wish to implement the quarantine action wh
 
 <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfXldtKp_K86UMEDgQzG_kqmyhuGbfA3h9WHEjY9S_syyZIUxuGZT-sToW8W_TpeBAsA8q3q-2TBJjz4yIJvvM9MVh9B0qa9pAe3HnNeHgUBoqoK97YyDPkrq53-03JGE3zD902?key=gXxqXq4O-toSF3b-7YIbPg" alt="" width="563"><figcaption></figcaption></figure>
 
-12. Ensure that the **Rule mode** is set to **Enforce** and the **Severity** is set to **High**.
-13. Click **Next**.&#x20;
-14. Click **Finish**.
+22. Ensure that the **Rule mode** is set to **Enforce** and the **Severity** is set to **High**.
+23. Click **Next**.&#x20;
+24. Click **Finish**.
