@@ -114,7 +114,7 @@ If you are using multiple domains to send emails from your organization and you 
 
 The condition expression is created as follows. This expression ensures that all the emails that are not yet scanned by Nightfall are scanned.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2).png" alt="" width="563"><figcaption></figcaption></figure>
 
 ### Step 3 - Modify Message and Add Custom Headers
 

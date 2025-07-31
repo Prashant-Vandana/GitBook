@@ -44,16 +44,32 @@ Additionally, you can also create a rule for quarantining suspicious emails. Thi
 You must create this rule only if you wish to implement the quarantine action while creating policies.
 
 1. Click **Add a Rule** and select **Create a new Rule**.&#x20;
-2. Enter a name for the rule in the Name field.
+2. Enter a name for the rule in the **Name** field.
 3. In the **Apply this rule if** field, select **The message headers...**
 4. Select **includes any of these words.**
-5. Type **X-NIGHTFALL-QUARANTINE** and click **Save**.&#x20;
-6. Click **Enter words**.&#x20;
-7. Type **True**, and click **Add**. Select the **True** check box.&#x20;
-8. Click **Save**.&#x20;
-9. Select **Redirect the message** to in the **Do the following** field.&#x20;
-10. Select the hosted quarantine option. &#x20;
-11. Click **Next**.&#x20;
+
+<figure><img src="../../../.gitbook/assets/image.png" alt="" width="563"><figcaption></figcaption></figure>
+
+5. Click **Enter Text**.&#x20;
+6. Type **X-NIGHTFALL-QUARANTINE** and click **Save**.&#x20;
+7. Click **Enter words**.&#x20;
+8. Type **True**, and click **Add**.&#x20;
+9. Select the **True** option.&#x20;
+10. Click **Save**.
+
+<figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="563"><figcaption></figcaption></figure>
+
+11. Select **Redirect the message** to in the **Do the following** field.&#x20;
+12. Select the **hosted quarantine** option. &#x20;
+13. Select **The message headers** option in the **Except if** field.&#x20;
+14. Select **includes any of these words.**
+15. Click **Enter Text**.&#x20;
+16. Type **X-MS-Exchange-Generated-Message-Source** and click **Save**.&#x20;
+17. Click **Enter words**.&#x20;
+18. Type **Quarantine**, and click **Add**.&#x20;
+19. Select the **Quarantine** option.&#x20;
+20. Click **Save**.&#x20;
+21. Click **Next**.&#x20;
 
 <figure><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfXldtKp_K86UMEDgQzG_kqmyhuGbfA3h9WHEjY9S_syyZIUxuGZT-sToW8W_TpeBAsA8q3q-2TBJjz4yIJvvM9MVh9B0qa9pAe3HnNeHgUBoqoK97YyDPkrq53-03JGE3zD902?key=gXxqXq4O-toSF3b-7YIbPg" alt="" width="563"><figcaption></figcaption></figure>
 

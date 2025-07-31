@@ -49,7 +49,7 @@ Microsoft Exchange uses connectors to manage inbound and outbound email flow. Yo
    3. Click **Manage** on the **Exchange Online** widget.
    4. Click **Deployment Guide** on **Exchange Online**.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 &#x20;      e. Note down the IP addresses  present in the 4th point under **Step 2.**
 
