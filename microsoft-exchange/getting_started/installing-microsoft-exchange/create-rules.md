@@ -48,7 +48,7 @@ You must create this rule only if you wish to implement the quarantine action wh
 3. In the **Apply this rule if** field, select **The message headers...**
 4. Select **includes any of these words.**
 
-<figure><img src="../../../.gitbook/assets/image.png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2).png" alt="" width="563"><figcaption></figcaption></figure>
 
 5. Click **Enter Text**.&#x20;
 6. Type **X-NIGHTFALL-QUARANTINE** and click **Save**.&#x20;
@@ -57,7 +57,7 @@ You must create this rule only if you wish to implement the quarantine action wh
 9. Select the **True** option.&#x20;
 10. Click **Save**.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt="" width="563"><figcaption></figcaption></figure>
 
 11. Select **Redirect the message** **to** in the **Do the following** field.&#x20;
 12. Select the **hosted quarantine** option. &#x20;

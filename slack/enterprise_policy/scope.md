@@ -51,7 +51,7 @@ The Filters section provides you an added level of granularity in setting the Sc
 
 Slack policies support filtering based on users, user groups, channels, and apps. These options provide flexible, granular control on whom to apply the monitoring. The **Only Include** option is very useful to pick specific required users, groups, channels or apps for monitoring. particularly useful for creating broad policies with specific exceptions. Combining user and group options allows for complex, layered access control. The **exclude** option allows you to exclude the monitoring of unwanted users, user groups, channels, and apps, thus reducing the unwanted noise from secure entities.
 
-<figure><img src="../../.gitbook/assets/image (1223).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Filtering by Users
 
@@ -71,6 +71,18 @@ Slack policies support filtering based on users, user groups, channels, and apps
 
 * **Only Include**: Only messages sent by included Slack apps are scanned for sensitive data.&#x20;
 * **Exclude**: Messages sent by excluded Slack apps are not scanned.
+
+### Slack Tools (Slack Canvas)
+
+The Slack Canvas filter allows you to scan edits made to a Slack Canvas and files embedded within a Slack Canvas. You can choose to scan the required canvases or exclude the scanning of certain canvases. The filter options available are as follows.
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="563"><figcaption></figcaption></figure>
+
+* **Specific Canvases**: This option scans all your Slack Canvases and also files embedded within the Canvas.
+* **Specific Canvases**: This option allows you to select specific Slack Canvases. Only the selected Canvases and the files embedded within the Canvas are scanned.&#x20;
+* **All Canvases, except for**: This option allows you to select specific Slack Canvases. The selected Canvases and files embedded within these Canvases are not scanned and all other Canvases are scanned.
+
+**Note**: If you do not configure the Slack Canvases filter, Nightfall still scans Canvases shared in direct messages and groups. Enabling this footer ensures that Canvases not shared in any messages or groups are also scanned
 
 ## Priority Order for Conflict Management
 
