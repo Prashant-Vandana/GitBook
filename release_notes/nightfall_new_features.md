@@ -4,6 +4,14 @@ description: This document lists all the features released by Nightfall in 2025.
 
 # Release Notes 2025
 
+## July 2025
+
+This section enlists the feature enhancements released by Nightfall in July 2025.
+
+* **Support for Content Inspection in Windows**: In Exfiltration, you can now leverage Nightfall [detection rules](https://help.nightfall.ai/detection_platform/create_detection_rules) to scan endpoint policies for sensitive data like PCI, PII, passwords, and so on in Windows devices. Click [here](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/scope#content-scanning) to learn more about this feature.&#x20;
+* **New MS Exchange Integration**: In Data Detection and Response, Nightfall now provides an integration with Microsoft Exchange. You can sow scan your data in MS Exchange for sensitive data. Click [here](../microsoft-exchange/getting_started/) to learn more about this feature.&#x20;
+* **New OneDrive and Salesforce Integrations**: In Data Discovery and Classification, Nightfall now provides integrations for Salesforce and OneDrive. Click [here](https://help.nightfall.ai/audit/salesforce-audit/overview) for Salesforce integration documentation. Click [here](https://help.nightfall.ai/audit/onedrive-audit/overview) for  OneDrive integration documentation.&#x20;
+
 ## June 2025
 
 This section enlists the feature enhancements released by Nightfall in June 2025.
@@ -11,7 +19,7 @@ This section enlists the feature enhancements released by Nightfall in June 2025
 * **Support for macOS File Upload Blocking:** Nightfall now allows you to automatically block files with sensitive data from being uploaded to untrusted sites. Click [here](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/advanced_settings/automated_action#block-transfer) to learn more about this feature.&#x20;
 * **Automatic Retraining of Image ID Detectors**: The image ID detectors are now equipped with the Automated Supervised learning (ASL) system. This enhances the capabilities of the image IDE detectors. Click [here](../detection_platform/detection_glossary/) to learn more about Nightfall detectors.
 * **New Driver's License Detectors**: Nightfall has now introduced new driving license detectors for the four southeast asian countries Vietnam, Thailand, Myanmar, and Cambodia. Click [here](../detection_platform/detection_glossary/) to learn more about Nightfall detectors.
-* **New Search Operators for Exfiltration Events**: Nightfall has introduced new search operators in Exfiltration. You can use these operators to search specific Exfiltration events.&#x20;
+* **New Search Operators for Exfiltration Events**: Nightfall has introduced new search operators in Exfiltration. You can use these operators to search specific Exfiltration events. Click [here](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration-events#search-events) to learn more about this feature.
 * **New Upgraded Dashboard**: Nightfall has upgraded the Dashboard window completely to provide more insights and data on various aspects. Click [here](https://help.nightfall.ai/dashboard/overview) to learn more about this feature.
 * **Clipboard Screen Capture Detection**: In Exfiltration, Nightfall now allows you to block users from pasting visual data (images/screenshots) to unsanctioned destinations. Click [here ](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/trigger#clipboard-paste)to learn more about this feature.&#x20;
 * **Clipboard Paste blocking in Windows**: In Exfiltration, Nightfall has now extended the Clipboard paste feature to Windows OS devices (previously this feature was available only in macOS based devices). Click [here ](https://help.nightfall.ai/data-exfiltration-prevention/exfiltration_endpoint/policies/trigger#clipboard-paste)to learn more about this feature.
