@@ -144,6 +144,7 @@
   * [I send a sensitive message, edit it, and then admin applies the Redact action. What is the outcome?](slack/slack-faqs/multiple_actions.md)
   * [How do I re-install Nightfall DLP for Slack Pro Edition?](slack/slack-faqs/reinstall_slack_pro.md)
   * [How do I re-install Nightfall DLP for Slack Enterprise Edition?](slack/slack-faqs/reinstall_slack_enterprise.md)
+  * [Our Slack Admin has Quit. Will it impact Nightfall Scan?](slack/slack-faqs/our-slack-admin-has-quit.-will-it-impact-nightfall-scan.md)
 
 ## Nightfall for GitHub <a href="#github" id="github"></a>
 
