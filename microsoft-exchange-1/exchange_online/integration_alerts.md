@@ -1,10 +1,10 @@
 ---
-description: Learn how you can configure integration level alerts in Exchange.
+description: Learn how you can configure integration level alerts in SharePoint.
 ---
 
-# Configure Alerts for Exchange
+# Configure Alerts for SharePoint
 
-The Nightfall for Exchange integration supports the configuration of alerts at the policy level and at the integration level. Alerts can be sent in Exchange by using the following alert destinations.
+The Nightfall for SharePoint integration supports the configuration of alerts at the policy level and at the integration level. Alerts can be sent in SharePoint by using the following alert destinations.
 
 * [Slack](https://help.nightfall.ai/sensitive-data-protection/microsoft-365/nightfall-for-microsoft-teams/configuring-integration-alerts#configuring-slack-as-an-alert-channel)&#x20;
 * [Microsoft Teams](https://help.nightfall.ai/sensitive-data-protection/microsoft-365/nightfall-for-microsoft-teams/configuring-integration-alerts#configuring-ms-teams-as-an-alert-channel)
@@ -27,13 +27,13 @@ This document explains how to configure alerts at the integration level. To lear
 
 ## Configure Alerts at the Integration Level&#x20;
 
-You can configure alerts at the integration level once you have installed the Nightfall for Exchange Online DLP  integration.&#x20;
+You can configure alerts at the integration level once you have installed the Nightfall for SharePoint DLP  integration.&#x20;
 
 To configure alerts at the integration level:
 
 1. Navigate to Integrations in the left menu.
-2. Click **Manage** on the **Exchange Online** widget.
-3. Click the **Exchange Online Alerting** section.
+2. Click **Manage** on the **SharePoint** widget.
+3. Click the **SharePoint Alerting** section.
 4. You can configure one or multiple alert channels.&#x20;
 
 ### Configuring Slack as an Alert Channel
@@ -47,9 +47,9 @@ To configure alerts at the integration level:
 
 <figure><img src="../../.gitbook/assets/image (842).png" alt=""><figcaption></figcaption></figure>
 
-A confirmation pop-up box is displayed to confirm if the Slack channel (entered in the second step) must be used only for Exchange Online DLP integration or all the Nightfall integrations.&#x20;
+A confirmation pop-up box is displayed to confirm if the Slack channel (entered in the second step) must be used only for SharePoint DLP integration or all the Nightfall integrations.&#x20;
 
-4. Select **No, only integration level** to use the Slack channel only for Exchange Online DLP, or select **Yes, please** to use the selected Slack channel for all the Nightfall integrations.&#x20;
+4. Select **No, only integration level** to use the Slack channel only for SharePoint DLP, or select **Yes, please** to use the selected Slack channel for all the Nightfall integrations.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (843).png" alt="" width="563"><figcaption></figcaption></figure>
 
@@ -79,9 +79,9 @@ The **Team** and **Channel** drop-down menus are displayed.&#x20;
 
 <figure><img src="../../.gitbook/assets/imageedit_8_4300516314.png" alt=""><figcaption></figcaption></figure>
 
-A confirmation pop-up box is displayed to confirm if the Email ID (entered in the second step) must be used only for Exchange Online DLP integration or all the Nightfall integrations.&#x20;
+A confirmation pop-up box is displayed to confirm if the Email ID (entered in the second step) must be used only for SharePoint DLP integration or all the Nightfall integrations.&#x20;
 
-4. Select **No, only integration level** to use the Slack channel only for Exchange Online DLP, or select **Yes, please** to use the selected Slack channel for all the Nightfall integrations.&#x20;
+4. Select **No, only integration level** to use the Slack channel only for SharePoint DLP, or select **Yes, please** to use the selected Slack channel for all the Nightfall integrations.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (162).png" alt="" width="563"><figcaption></figcaption></figure>
 
@@ -125,9 +125,9 @@ This is part of alert event consumption and can be ignored.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (847).png" alt=""><figcaption></figcaption></figure>
 
-A confirmation pop-up box is displayed to confirm if the JIRA settings configured for the **Exchange Online** DLP integration must be applied to all the other Nightfall integrations too.&#x20;
+A confirmation pop-up box is displayed to confirm if the JIRA settings configured for the **SharePoint** DLP integration must be applied to all the other Nightfall integrations too.&#x20;
 
-6. Select **No, only integration level** to use the configurations only for Exchange Online DLP, or select **Yes, please** to use the selected JIRA configurations for all the Nightfall integrations.&#x20;
+6. Select **No, only integration level** to use the configurations only for SharePoint DLP, or select **Yes, please** to use the selected JIRA configurations for all the Nightfall integrations.&#x20;
 
 <figure><img src="../../.gitbook/assets/image (848).png" alt="" width="563"><figcaption></figcaption></figure>
 

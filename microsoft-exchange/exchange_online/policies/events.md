@@ -32,7 +32,7 @@ To view the Events from the Nightfall Console:
 
 <figure><img src="../../../.gitbook/assets/image (11).png" alt="" width="563"><figcaption></figcaption></figure>
 
-Once you filter the Events to view only the Confluence Events, you can refer to the [#event-list-view](../../../dashboard/sdp_events/#event-list-view "mention") section to learn more about the available options.&#x20;
+Once you filter the Events to view only the Exchange Events, you can refer to the [#event-list-view](../../../dashboard/sdp_events/#event-list-view "mention") section to learn more about the available options.&#x20;
 
 4. Click on any of the Events to view details of an Event. You may click anywhere in the row of an Event that you wish to inspect. Details will be present via a side panel.
 
@@ -48,13 +48,13 @@ On the Event detail view, you can view the applicable actions from the actions s
 
 To view the complete list of actions, applicable to all the integrations, you can refer to the [event\_actions.md](../../../dashboard/sdp_events/event_actions.md "mention") document.&#x20;
 
-The list of actions supported for Confluence are as follows. Some of these actions are common to other integrations as well.&#x20;
+The list of actions supported for Exchange are as follows. Some of these actions are common to other integrations as well.&#x20;
 
 * **Copy Event Link**: The action copies the link to the Event. You can save or send this link to directly open the Event. This action is available only on the Event detail view.
 * **Ignore**: The ignore action flags Nightfall to ignore all the findings in the Event and may be taken if you find the findings false positive. This action marks the Event as resolved and moves it to the Resolved section. You can undo this action.&#x20;
 * **Acknowledge**:  You can take this action to notify other users that you have looked into this Event and will take suitable action in future.&#x20;
-* **Notify Email**: This action notifies the end user who added the sensitive data file to the OneDrive about the event,  through email.
-* **Notify Slack**: This action notifies the end user who added the sensitive data file to the OneDrive about the event,  through Slack.
+* **Notify Email**: This action notifies the end user who added the sensitive data file to Exchange,  through email.
+* **Notify Slack**: This action notifies the end user who added the sensitive data file to Exchange,  through Slack.
 * **Send to JIRA**: This action creates a JIRA ticket for the Event. You can pick a project and Issue type while creating the JIRA ticket and can assign the JIRA ticket to the end-user.
 * **Resolve**: This action must be taken when the sensitive data is removed completely. This action resolves the Event.
 

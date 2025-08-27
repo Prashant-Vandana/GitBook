@@ -252,6 +252,22 @@
     * [Risk Score in Exchange](microsoft-exchange/exchange_online/policies/risk_score.md)
     * [Manage Exchange Events](microsoft-exchange/exchange_online/policies/events.md)
 
+## Nightfall for Microsoft Sharepoint <a href="#microsoft-exchange" id="microsoft-exchange"></a>
+
+* [Getting Started](microsoft-exchange-1/getting_started/README.md)
+  * [Microsoft SharePoint Requirements](microsoft-exchange-1/getting_started/requirements.md)
+  * [Setting up Directory Sync](microsoft-exchange-1/getting_started/directory_sync.md)
+  * [Installing Microsoft SharePoint](microsoft-exchange-1/getting_started/installing-microsoft-sharepoint.md)
+* [Nightfall for Microsoft SharePoint](microsoft-exchange-1/exchange_online/README.md)
+  * [Configure Alerts for SharePoint](microsoft-exchange-1/exchange_online/integration_alerts.md)
+  * [Configure Policies for SharePoint](microsoft-exchange-1/exchange_online/policies/README.md)
+    * [Select Integration in SharePoint](microsoft-exchange-1/exchange_online/policies/integration.md)
+    * [Configure Scope for SharePoint](microsoft-exchange-1/exchange_online/policies/scope.md)
+    * [Configure Detection Rules in SharePoint](microsoft-exchange-1/exchange_online/policies/detection_rules.md)
+    * [Configure Advanced Settings in SharePoint](microsoft-exchange-1/exchange_online/policies/advanced_settings.md)
+    * [Risk Score in SharePoint](microsoft-exchange-1/exchange_online/policies/risk_score.md)
+    * [Manage SharePoint Events](microsoft-exchange-1/exchange_online/policies/events.md)
+
 ## Nightfall for Gmail  <a href="#gmail" id="gmail"></a>
 
 * [Overview](gmail/overview.md)
