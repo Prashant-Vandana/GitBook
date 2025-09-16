@@ -4,6 +4,15 @@ description: This document lists all the features released by Nightfall in 2025.
 
 # Release Notes 2025
 
+## August 2025
+
+This section enlists the feature enhancements released by Nightfall in August 2025.
+
+* **Nightfall Copilot - Nyx:** In Exfiltration, Nightfall has now introduced Copilot called **Nyx**. The Copilot can surface patterns, summarize user activity, and suggest future steps. The Copilot is very helpful in investigating risks. Click [Nyx – AI-powered DLP Copilot](https://app.gitbook.com/s/ZeqNSdo8J8cLJPU3Gs5M/nightfall_copilot_nyx/nyx-ai-powered-dlp-copilot "mention") to learn more about this feature.&#x20;
+* **New SharePoint Integration**: Nightfall has now introduced an integration for Microsoft SharePoint. This integration protects sensitive data in your SharePoint sites. Click [Broken link](broken-reference "mention") to learn more about this feature.
+* **Zendesk Tags Based Inclusion/Exclusion**: Nightfall now allows you to include or exclude Zendesk tickets from being monitored, based on tags. Click [scope.md](../zendesk/policies/scope.md "mention") to learn more about this feature.&#x20;
+* **Asset Preview for Exfiltrated Files** (limited early access): In Exfiltration, Nightfall now displays a preview of asset that triggered an exfiltration event. You can preview the asset from the asset detail view page.&#x20;
+
 ## July 2025
 
 This section enlists the feature enhancements released by Nightfall in July 2025.
